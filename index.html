@@ -348,17 +348,15 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
 /* NAVBAR MOBILE FIXED */
 /* ---------------- Desktop Navbar ---------------- */
 nav {
-    position: fixed;           /* top pe fix */
-    top: 20px;                 
+    position: fixed;           /* fix top */
+    top: 20px;                 /* desktop top spacing */
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;               /* desktop pe full width */
-    max-width: 1400px;         /* large screens ke liye optional */
     z-index: 9999;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;        /* desktop padding thoda bada */
+    padding: 6px 30px;         /* desktop padding */
     border-radius: 30px;
     background: rgba(255,255,255,0.08);
     backdrop-filter: blur(18px);
@@ -374,8 +372,8 @@ nav {
     left: 0;
     height: 5px;
     background: #ff004c;
-    width: 0%;  
-    z-index: 10000; 
+    width: 0%;  /* JS scroll width handle karega */
+    z-index: 10000; /* navbar ke upar bhi rahe */
 }
 
 /* Hamburger icon for mobile */
@@ -394,44 +392,71 @@ body {
 /* ---------------- Mobile Navbar ---------------- */
 @media(max-width:900px){
     nav {
-        padding: 16px 25px;       /* mobile ke liye chhota padding */
-        width: 90%;               /* mobile ke liye screen ke hisab se width */
-        border-radius: 18px;      
+        padding: 16px 25px;       /* sirf mobile ke liye padding adjust */
+        width: 90%;               /* mobile screen ke hisab se width */
+        border-radius: 18px;      /* thoda chhota round corner */
     }
 
     .menu-icon {display: block;}
 
-    .nav-links {
-        position: absolute;
-        top: 70px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 50%;
-        background: transparent;
-        backdrop-filter: blur(15px);
-        border-radius: 18px;
-        flex-direction: column;
-        gap: 18px;
-        padding: 25px;
-        display: none;
-        text-align: right;
-        animation: fadeIn .3s ease;
-        opacity: 0;
-        transition: opacity .3s ease, transform .3s ease;
-    }
+   .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 220px;                  /* fixed width for dropdown */
+    background: rgba(0,0,0,0.75);  /* dark background */
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    display: none;                  /* hidden by default */
+    flex-direction: column;         /* column mode */
+    gap: 15px;
+    padding: 15px;
+    text-align: left;
+    animation: fadeIn .3s ease;
+    opacity: 0;
+    transition: opacity .3s ease, transform .3s ease;
+}
 
-    .nav-links.active {
-        display: flex;
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
+.nav-links.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* UL inside nav-links */
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;   /* ensures row-wise items */
+    gap: 12px;                /* spacing between items */
+}
+
+/* LI inside UL */
+.nav-links ul li {
+    width: 100%;              /* full width so each item is row */
+}
+
+/* Anchor links */
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 10px;
+    display: block;           /* ensures full row clickable */
+    transition: background 0.3s;
+}
+.nav-links ul li a:hover {
+    background: rgba(255,255,255,0.1);
+    border-radius: 6px;
+}
+
 }
 
 @keyframes fadeIn {
     from {opacity: 0; transform: translateX(-50%) translateY(-10px);}
     to {opacity: 1; transform: translateX(-50%) translateY(0);}
 }
-
 
 
 /* ================= MOBILE FIXES (≤900px ONLY) ================= */
