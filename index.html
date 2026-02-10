@@ -50,7 +50,7 @@ nav ul li a::after {content: "";position: absolute;left: 0;bottom: -4px;width: 0
 nav ul li a:hover::after {width: 100%;}
 
 /* HERO */
-.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e') center/cover;
+.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e') center/cover;
 display:flex;flex-direction:column;justify-content:center;padding-left:10%;padding-top:60px;transition: transform 0.5s ease, opacity 0.5s ease;}
 .hero.scrolled {transform: scale(0.95);opacity: 0.85;}
 .type{font-size:28px;height:40px;margin-top:10px}
@@ -84,6 +84,10 @@ clip-path:polygon(0 0,92% 0,100% 50%,92% 100%,0 100%,6% 50%);filter:drop-shadow(
 @media(max-width:900px){.puzzle{flex-direction:column;text-align:center;}
 .puzzle-img{margin-top:40px;transition: transform 0.4s ease;}}
 .puzzle-img:hover {transform: scale(1.1);}
+/* Puzzle Section - Theme Toggle Fix */
+body.light-mode .puzzle {background:black;}
+body.light-mode .puzzle .stack .J1,body.light-mode .puzzle .stack .M2,body.light-mode .puzzle .stack .C3 {color: #00ffff;}
+body.light-mode .puzzle-img img {filter: brightness(0.85);}
 
 /* ABOUT */
 .about{display:flex;gap:60px;padding:120px 10%;align-items:center;flex-wrap:wrap}
@@ -256,28 +260,22 @@ body.light-mode .theme-toggle{background:#fff;color:#111;border-color:#ff004c;}
 .service{padding:50px;border-radius:40px;background:linear-gradient(145deg,#1a1a1a,#000);text-align:center}
 
 /* UI/UI Images Grid */
-.uxgrid-section{width:100vw;padding:120px 6%;background:linear-gradient(120deg,#0b132b,#1c2541,#3a506b);}
-/* FULL WIDTH CARD */
-.uxgrid-card{width:100%;padding:40px;border-radius:28px;background:rgba(255,255,255,0.08);backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,0.25);box-shadow:0 0 50px rgba(0,0,0,.6);position:relative;}
-/* TITLE */
+.uxgrid-section{width:100vw;padding:160px 6%;background:linear-gradient(120deg,#0b132b,#1c2541,#3a506b);}
+.uxgrid-card{width:100%;padding:60px;border-radius:28px;background:rgba(255,255,255,0.08);backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.25);box-shadow:0 0 60px rgba(0,0,0,.6);position:relative;}
 .uxgrid-title{font-size:42px;color:#fff;margin-bottom:30px;letter-spacing:1px;}
-/* GRID LAYOUT – FULL WIDTH */
-.uxgrid-layout{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:22px;}
-/* IMAGE BOX */
+.uxgrid-layout{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:300px;gap:25px;}
 .uxgrid-item{border-radius:22px;overflow:hidden;position:relative;}
-/* IMAGE SAFE SIZE */
 .uxgrid-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease;}
-/* HOVER EFFECT */
-.uxgrid-item:hover img{transform:scale(1.08);}
-/* TALL IMAGE */
+.uxgrid-item:hover img{transform:scale(1.1);}
 .uxgrid-tall{grid-row:span 2;}
-/* WIDE IMAGE */
 .uxgrid-wide{grid-column:span 2;}
-/* OVERLAY */
 .uxgrid-item::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.35),transparent);}
-/* RESPONSIVE */
-@media(max-width:900px){.uxgrid-layout{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px;}}
+.uxgrid-caption {position: absolute;bottom: 10px;left: 10px;color: #fff;font-weight: 600;background: rgba(0,0,0,0.4);padding: 6px 12px;border-radius: 12px;font-size: 14px;transition: background 0.3s ease;}
+.uxgrid-item:hover .uxgrid-caption {background: rgba(0,0,0,0.6);}
+@media(max-width:900px){.uxgrid-layout {grid-template-columns: 1fr;grid-auto-rows: 250px;gap: 20px;}}
+
+/* Neo Images Grid */
 *{margin:0;padding:0;box-sizing:border-box;}
 .neo-grid-section{width:100%;padding:60px 5vw;background:#050814;}
 .neo-grid-wrapper{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:22px;}
@@ -460,23 +458,32 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
   }
 
   /* ---------- BILLIONAIRE / IMAGE GRID SECTION ---------- */
-  /* single image full row */
-  .neo-left,
-  .neo-right{
-    grid-column: 1 / -1;
-    grid-row: auto;
-    height: auto;
-  }
+/* RESPONSIVE MOBILE */
+@media(max-width:900px){
+    .neo-grid-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-auto-rows: auto;           
+        gap: 16px;              
+    }
 
-  /* second + third images side-by-side */
-  .neo-wide{
-    grid-column: span 2;
-  }
+    /* Tall images: full width, one per row */
+    .neo-left, .neo-right, .neo-tall {
+        grid-column: 1 / -1; /* full width of row */
+        grid-row: auto;      /* height automatic */
+    }
 
-  .neo-grid-wrapper{
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 200px;
-  }
+    /* Wide images: 2 per row */
+    .neo-wide {
+        grid-column: span 1; /* 2 images per row */
+    }
+
+    /* Optional: adjust image height for tall images if needed */
+    .neo-left img, .neo-right img, .neo-tall img {
+        height: auto;        
+        width: 100%;
+    }
+}
 
   /* ---------- HERO IMAGE FIX ---------- */
   .heroH-img{
@@ -514,6 +521,7 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
 <li><a href="#home"><i class="fas fa-house"></i>Home</a></li>
 <li><a href="#about"><i class="fas fa-user"></i>About Me</a></li>
 <li><a href="#works"><i class="fas fa-eye"></i>My Works</a></li>
+<li><a href="#memories"><i class="fa-regular fa-bookmark"></i>Memories</a></li>
 <li><a href="#achievements"><i class="fas fa-trophy"></i>Achievements</a></li>
 <li><a href="#testimonials"><i class="fas fa-comment-dots"></i>Testimonials</a></li>
 <li><a href="#billionaire"><i class="fas fa-gem"></i>Billionaire</a></li>
@@ -574,7 +582,7 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
 <section class="about reveal-left">
 <div class="img-grid-wrap">
 <h1 style="text-align: center;" id="about">About Me <i class="fas fa-user"></i></h1><br>  
-<img src="https://images.hdqwalls.com/download/brunette-girl-pose-glasses-white-crop-top-wb-1440x2960.jpg" class="cut1">
+<img src="https://images.hdqwalls.com/download/brunette-girl-pose-glasses-white-crop-top-wb-1440x2960.jpg" class="cut1 zigzag">
 </div>
 <p>Hi, I’m Ivy – a Branding & Organic Growth Strategist helping CEOs, Executives, and B2B Companies amplify their online presence and achieve measurable results. With a background as a Product Manager and ex-Software Engineer at Microsoft, I merge technology, strategy, and storytelling to craft compelling digital experiences. I specialize in AI, tech innovation, and growth strategies that make professionals and businesses visible, credible, and successful. Let’s transform your brand into a story that resonates and drives results.</p>
 </section>
@@ -584,7 +592,7 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
 <p><strong id="about" style="font-size: 1.5rem; color: #ff004c;">Who I Am & What I Stand For: <i class="fas fa-chess-king"></i></strong><br><br> 
 I help professionals and businesses grow their visibility and influence on LinkedIn and other platforms. My strategies focus on organic growth, content optimization, and brand positioning, ensuring that your message reaches the right audience. Every campaign I design is data-driven, results-focused, and tailored to your unique goals.</p>
 <div class="img-grid-wrap">
-<img src="https://tse4.mm.bing.net/th/id/OIP.Ksb3p0JIeoe0CB1ADEQTvAHaF7?w=1280&h=1024&rs=1&pid=ImgDetMain&o=7&rm=3" class="cut2">
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/3dbef425012217.5633dd7160934.jpg" class="cut2 zigzag">
 </div>
 </section>
 
@@ -610,7 +618,7 @@ I help professionals and businesses grow their visibility and influence on Linke
 
 <!-- See My Works Section -->
 <section class="speech gridbg reveal-left">
-<img src="https://img.freepik.com/premium-photo/confident-cute-girl-landscape-garden-wearing-desi-dress-fashion-photoshoot_658768-281.jpg?w=2000" class="puzzle-img">
+<img src="https://img.freepik.com/premium-photo/confident-cute-girl-landscape-garden-wearing-desi-dress-fashion-photoshoot_658768-281.jpg?w=2000" class="puzzle-img zigzag">
 <div><h1 style="text-align: center;" id="works">My Works <i class="fas fa-file-signature"></i></h1><br>
 <p>I’ve helped CEOs, executives, and B2B companies transform their LinkedIn presence and grow their professional influence. Here’s a closer look at the kind of work I do:
 <br><br>
@@ -630,7 +638,7 @@ I help professionals and businesses grow their visibility and influence on Linke
 * Product Management & Strategy Support: Assisted companies in aligning product positioning and marketing strategies with online visibility and thought leadership efforts.
 <br><br>
 Each project is crafted with a focus on measurable impact, creativity, and growth. Whether it’s boosting visibility, strengthening professional credibility, or connecting with the right audience, my work ensures tangible results and lasting professional value.</p>
-<img src="https://img.freepik.com/premium-photo/pretty-girl-landscape-photoshoot-tree_658768-91.jpg?w=2000" class="puzzle-img">
+<img src="https://img.freepik.com/premium-photo/pretty-girl-landscape-photoshoot-tree_658768-91.jpg?w=2000" class="puzzle-img zigzag">
 </section>
 
 <!-- SERVICES Section -->
@@ -642,10 +650,56 @@ Each project is crafted with a focus on measurable impact, creativity, and growt
 </div>
 </section>
 
+<!-- Memories Section -->
+<section id="memories" class="uxgrid-section reveal-right">
+  <div class="uxgrid-card">
+    <h2 class="uxgrid-title">Memories <i class="fa-regular fa-bookmark"></i></h2>
+    
+    <div class="uxgrid-layout">
+      <!-- Image 1 -->
+      <div class="uxgrid-item">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.Ksb3p0JIeoe0CB1ADEQTvAHaF7?w=1280&h=1024&rs=1&pid=ImgDetMain&o=7&rm=3">
+        <div class="uxgrid-caption">Italy</div>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="uxgrid-item uxgrid-tall">
+        <img src="https://images.hdqwalls.com/download/girl-black-dress-4k-op-1440x2960.jpg">
+        <div class="uxgrid-caption">Japan</div>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="uxgrid-item uxgrid-wide">
+        <img src="https://www.hdwallpapers.in/download/beautiful_girl_model_is_lying_down_on_yellow_flowers_field_wearing_colorful_dress_hd_girls-1280x720.jpg">
+        <div class="uxgrid-caption">Switzerland</div>
+      </div>
+
+      <!-- Image 4 -->
+      <div class="uxgrid-item">
+        <img src="https://wallpaperaccess.com/full/1997181.jpg">
+        <div class="uxgrid-caption">Australia</div>
+      </div>
+
+      <!-- Image 5 -->
+      <div class="uxgrid-item">
+        <img src="https://wallpapercave.com/wp/wp4100879.jpg">
+        <div class="uxgrid-caption">France</div>
+      </div>
+
+            <!-- Image 5 -->
+      <div class="uxgrid-item">
+        <img src="https://cdn.suwalls.com/wallpapers/girls/beautiful-girl-47669-2880x1800.jpg">
+        <div class="uxgrid-caption">Iceland</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- Achievements Section -->
 <section class="alt gridbg reveal-right">
 <div><h1 style="text-align: center;" id="achievements">Achievements <i class="fas fa-award"></i></h1><br> 
-<img src="https://godatenow.com/ladies/view/photo/b165619-3630ba9ab957e1bd8684386671930cb4.jpg" class="cut3"></div>
+<img src="https://godatenow.com/ladies/view/photo/b165619-3630ba9ab957e1bd8684386671930cb4.jpg" class="cut3 zigzag"></div>
 <p><strong style="font-size: 1.5rem; color: #ff004c;">Recognitions & Milestones: <i class="fas fa-flag-checkered"></i></strong><br><br>I’ve been fortunate to receive recognition for my work and contributions in technology, personal branding, and leadership. Each achievement reflects my commitment to helping individuals and companies grow, learn, and succeed.
 <br><br>
 * LinkedIn Top Voice 2025 – Recognized for thought leadership and impactful content.
@@ -675,7 +729,7 @@ Each milestone strengthens my mission to empower professionals and organizations
 <section class="alt reveal-right">
 <div class="img-grid-wrap">
 <h1 style="text-align: center;">Testimonials <i class="fas fa-comment-dots"></i></h1><br>  
-<img src="https://tse1.explicit.bing.net/th/id/OIP.pMcnHFF-OqJlwK3Re0x6uAHaPO?rs=1&pid=ImgDetMain&o=7&rm=3" class="cut3"></div>
+<img src="https://tse1.explicit.bing.net/th/id/OIP.pMcnHFF-OqJlwK3Re0x6uAHaPO?rs=1&pid=ImgDetMain&o=7&rm=3" class="cut3 zigzag"></div>
 <p>* Ivy transformed our LinkedIn presence, helping us reach the right audience. Her strategies are practical, effective, and easy to implement. Within weeks, our engagement and connections increased significantly.<br>– CEO, B2B Company
 <br><br>
 * Her mentorship in AI and tech content boosted my visibility and credibility massively. She guided me step by step on thought leadership posts, audience analytics, and refining messaging. Thanks to Ivy, I’ve been invited to speak at industry panels and webinars.<br>– Product Manager, Startup
@@ -789,7 +843,7 @@ Each milestone strengthens my mission to empower professionals and organizations
 I believe in thinking big, bold, and strategically. My approach combines innovation, data-driven insights, and human storytelling to help CEOs, startups, and tech leaders reach their maximum potential.
 Whether it’s building influential personal brands, scaling tech products, or mentoring future leaders, my goal is to turn ambition into impact and ideas into execution.</p>
 <div class="img-grid-wrap">
-<img src="https://images.pexels.com/photos/9688593/pexels-photo-9688593.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="cut4">
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/a8642525012217.5633dd7143ab1.jpg" class="cut4 zigzag">
 </div>
 </section>
 
@@ -805,7 +859,7 @@ Whether it’s building influential personal brands, scaling tech products, or m
   <div class="neo-grid-wrapper">
     <div class="neo-item neo-tall neo-left"><img src="https://images.pexels.com/photos/18185497/pexels-photo-18185497.jpeg?cs=srgb&dl=pexels-jos%C3%A9-cango-18185497.jpg&fm=jpg"></div>
     <div class="neo-item"><img src="https://wallpapers.com/images/hd/beautiful-girl-during-winter-gqctsy6q898vyea1.jpg"></div>
-    <div class="neo-item"><img src="https://www.10wallpaper.com/wallpaper/3840x2400/1807/Outdoor_sexy_beautiful_blonde_hair_girl_3840x2400.jpg"></div>
+    <div class="neo-item"><img src="https://live.staticflickr.com/4291/35921032656_9117ac0f8d_b.jpg"></div>
     <div class="neo-item neo-wide"><img src="https://dummyimage.com/1200x600/ccc/000&text=LinkedIn+Proof"></div>
     <div class="neo-item neo-tall neo-right"><img src="https://wallpapers.com/images/hd/captivating-work-out-session-czfmxp7ihzsmdbpy.jpg"></div>
   </div>
@@ -832,6 +886,7 @@ Whether it’s building influential personal brands, scaling tech products, or m
       <a href="#home">Home</a>
       <a href="#about">About Me</a>
       <a href="#works">My Works</a>
+        <a href="#memories">Memories</a>
       <a href="#achievements">Achievements</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#billionaire">Billionaire</a>
