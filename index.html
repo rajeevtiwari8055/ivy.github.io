@@ -415,6 +415,90 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
     }
 }
 
+/* ================= MOBILE FIXES (≤900px ONLY) ================= */
+@media (max-width: 900px) {
+
+/* ---------- PROGRESS BAR ---------- */
+#progress-bar,
+.scroll-indicator {
+    position: fixed;
+    top: 0;               /* top of the screen */
+    left: 0;
+    height: 5px;
+    width: 0%;
+    background: #ff004c;
+    z-index: 10000;
+}
+
+    /* Make body content start below navbar */
+
+
+  /* ---------- HERO CONTENT OVERFLOW FIX ---------- */
+  .hero{
+    padding-left: 6%;
+    padding-right: 6%;
+    text-align: left;
+  }
+
+  /* PORTFOLIO TEXT SIZE  */
+  .big-title{
+    font-size: 70px;
+    line-height: 1;
+    word-break: break-word;
+  }
+
+  /* ---------- JOIN ME COMMUNITY (ONLY FONT SIZE) ---------- */
+  .stack .J1{font-size: 80px;}
+  .stack .M2{font-size: 70px; margin-left: 0;}
+  .stack .C3{font-size: 50px; margin-left: 0;}
+  .stack{white-space: normal; text-align:center;}
+
+  /* ---------- GALLERY (2–2 IMAGES PER ROW) ---------- */
+  .gallery{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  /* ---------- BILLIONAIRE / IMAGE GRID SECTION ---------- */
+  /* single image full row */
+  .neo-left,
+  .neo-right{
+    grid-column: 1 / -1;
+    grid-row: auto;
+    height: auto;
+  }
+
+  /* second + third images side-by-side */
+  .neo-wide{
+    grid-column: span 2;
+  }
+
+  .neo-grid-wrapper{
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+  }
+
+  /* ---------- HERO IMAGE FIX ---------- */
+  .heroH-img{
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .heroH-img img{
+    height: 500px;
+    max-width: 100%;
+    margin: auto;
+  }
+
+/* Extra small mobile devices */
+.heroH h1 { font-size: 60px; }.heroH p { font-size: 18px; }.typing { font-size: 18px; }
+/* ---------- TOGGLE BUTTON VISIBLE ---------- */
+.theme-toggle{right: 14px;bottom: 14px;padding: 10px 14px;}}
+
+
 </style>
 </head>
 <body>
