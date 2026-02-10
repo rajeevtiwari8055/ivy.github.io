@@ -180,8 +180,8 @@ display:none;text-align:right;animation:fadeIn .3s ease;opacity:0;transition:opa
 
 /* CARDS */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;padding:120px 10%}
-.card{padding:40px;border-radius:25px;background:#111;border:2px solid var(--primary);transition:.5s}
-.card:hover{transform:scale(1.07);box-shadow:0 0 40px var(--primary)}
+.card{padding:40px;border-radius:25px;background:#111;border:1px solid #ff004c;transition:.5s}
+.card:hover{transform:scale(1.07);box-shadow:0 0 50px #ff004c;}
 
 /* POSTS GRID */
 .postsP{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;padding:110px 10%;background:#b26cff;color:#111}
@@ -196,10 +196,13 @@ display:none;text-align:right;animation:fadeIn .3s ease;opacity:0;transition:opa
 
 /* SHOWCASE CARDS */
 .section{padding:120px 10%; background-color: orangered;}
-.section h2{font-size:60px;margin-bottom:30px;}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;}
-.card{padding:40px;border-radius:25px;background:#111;border:1px solid #ff004c;}
-.card:hover{transform:scale(1.08) rotate(-1deg);box-shadow:0 0 50px #ff004c;}
+.section h1{font-size:60px;margin-bottom:30px;}
+/* Billionaire Images size */
+.cut9{width: 45%;max-width: 100%;height: auto;clip-path: polygon(0 15%,100% 0,100% 85%,0 100%);}
+/* IMPORTANT: parent safety */
+.section{overflow-x: hidden;}
+/* Mobile / Tablet FIX */
+@media (max-width: 900px){.cut9{display: block;width: 100vw;max-width: 100%;margin: 0 auto 20px;clip-path: polygon(0 10%,100% 0,100% 90%,0 100%);}}
 
 /* ===== Toggle Style/LIGHT MODE FIX (NO DESIGN CHANGE) ===== */
 body.light-mode{background:#f5f5f5;color:#111;}
@@ -347,17 +350,22 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
 
   /* ---------- NAVBAR + HAMBURGER FIX ---------- */
   nav{
-    width: 95%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 12px 18px;
+    width: calc(100% - 20px);
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    transform: none;
+    padding: 12px 14px;
+    position: fixed;
+    z-index: 999;
   }
 
+  /* HAMBURGER MENU */
   .nav-links{
-    width: 92%;
-    left: 50%;
-    transform: translateX(-50%);
-    max-height: 80vh;
+    width: 100%;
+    left: 0;
+    transform: none;
+    max-height: calc(100vh - 70px);
     overflow-y: auto;
   }
 
@@ -365,6 +373,17 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
     flex-direction: column;
     align-items: flex-end;
   }
+
+  #progress-bar,
+  .scroll-indicator{
+    position: fixed;       
+    top: 58px;              
+    left: 0;
+    height: 3px;
+    width: 0%;
+    z-index: 10000;   
+  }
+
 
   /* ---------- HERO CONTENT OVERFLOW FIX ---------- */
   .hero{
@@ -375,15 +394,15 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
 
   /* PORTFOLIO TEXT SIZE  */
   .big-title{
-    font-size: 40px;
+    font-size: 80px;
     line-height: 1;
     word-break: break-word;
   }
 
   /* ---------- JOIN ME COMMUNITY (ONLY FONT SIZE) ---------- */
-  .stack .J1{font-size: 60px;}
-  .stack .M2{font-size: 50px; margin-left: 0;}
-  .stack .C3{font-size: 40px; margin-left: 0;}
+  .stack .J1{font-size: 80px;}
+  .stack .M2{font-size: 70px; margin-left: 0;}
+  .stack .C3{font-size: 60px; margin-left: 0;}
   .stack{white-space: normal; text-align:center;}
 
   /* ---------- GALLERY (2–2 IMAGES PER ROW) ---------- */
@@ -402,6 +421,7 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
   .neo-right{
     grid-column: 1 / -1;
     grid-row: auto;
+    height: 90%;
   }
 
   /* second + third images side-by-side */
@@ -431,9 +451,9 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
 
 /* Extra small mobile devices */
 
-  .heroH h1 { font-size: 40px; }
-  .heroH p { font-size: 16px; }
-  .typing { font-size: 16px; }
+  .heroH h1 { font-size: 60px; }
+  .heroH p { font-size: 18px; }
+  .typing { font-size: 18px; }
 
   /* ---------- TOGGLE BUTTON VISIBLE ---------- */
   .theme-toggle{
@@ -452,7 +472,6 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
   }
 
 }
-
 
 </style>
 </head>
@@ -590,7 +609,7 @@ Each project is crafted with a focus on measurable impact, creativity, and growt
 
 <!-- SERVICES Section -->
 <section class="reveal-left">
-<div class="services">
+<div class="cards">
 <div class="card"><i class="fas fa-user-tie"></i> Personal Branding</div>
 <div class="card"><i class="fas fa-compass"></i> Creative Direction</div>
 <div class="card"><i class="fas fa-film"></i> Visual Storytelling</div>
@@ -667,17 +686,17 @@ Each milestone strengthens my mission to empower professionals and organizations
 
       <h3 class="packages-title"><i class="fas fa-tags" style="margin-right:10px;color:#ff004c;"></i> Pricing / Packages</h3>
       <div class="service-cards">
-        <div class="service-card">
+        <div class="service-card reveal-left">
           <h4>Ghostwriting <i class="fas fa-pen"></i></h4>
           <p>High-quality LinkedIn posts written for your profile.</p>
           <a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank" rel="noopener noreferrer" title="Connect on LinkedIn" class="btn-book">Book Now</a>
         </div>
-        <div class="service-card">
+        <div class="service-card reveal-right">
           <h4>Content Strategy <i class="fas fa-chart-line"></i></h4>
           <p>Plan and optimize content to grow your professional network.</p>
           <a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank" rel="noopener noreferrer" title="Connect on LinkedIn" class="btn-book">Book Now</a>
         </div>
-        <div class="service-card">
+        <div class="service-card reveal-left">
           <h4>LinkedIn Coaching <i class="fas fa-hand-holding-heart"></i></h4>
           <p>Personalized coaching sessions to improve your LinkedIn presence.</p>
           <a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank" rel="noopener noreferrer" title="Connect on LinkedIn" class="btn-book">Book Now</a>
@@ -692,7 +711,7 @@ Each milestone strengthens my mission to empower professionals and organizations
       <div class="testimonial-cards">
 
         <!-- First Row -->
-        <div class="testimonial-card">
+        <div class="testimonial-card reveal-right">
           <img src="https://thumbs.dreamstime.com/b/portrait-beautiful-young-woman-makeup-fashion-clothes%C3%B1%E2%80%9A-portrait-beautiful-young-woman-makeup-118348662.jpg" alt="Priya" class="testimonial-img">
           <p class="testimonial-text">
             "Ivy helped me showcase my LinkedIn profile perfectly! Highly recommended."
@@ -700,7 +719,7 @@ Each milestone strengthens my mission to empower professionals and organizations
           <h4 class="testimonial-author"><i class="far fa-comments"></i> Crystal</h4>
         </div>
 
-        <div class="testimonial-card">
+        <div class="testimonial-card reveal-left">
           <img src="https://pixy.org/src/7/78764.jpg" alt="Ankit" class="testimonial-img">
           <p class="testimonial-text">
             "Amazing work! The project insights and dashboards were very clear and professional."
@@ -709,7 +728,7 @@ Each milestone strengthens my mission to empower professionals and organizations
         </div>
 
         <!-- Second Row: Full Width -->
-        <div class="testimonial-card">
+        <div class="testimonial-card reveal-right">
           <img src="https://img.freepik.com/premium-photo/woman-with-long-hair_172134-1581.jpg" alt="Ritu" class="testimonial-img">
           <p class="testimonial-text">
             "Ivy's guidance on Power BI and SQL projects really helped me improve my skills."
@@ -733,9 +752,9 @@ Each milestone strengthens my mission to empower professionals and organizations
 
 <!-- Testimonials Quotes -->
 <section class="quotes reveal-right">
-<div class="quote"><i class="fas fa-pen-fancy"></i> Decide firmly, work relentlessly.</div>
-<div class="quote"><i class="fas fa-pen-fancy"></i> The best gift you can give is a smile.</div>
-<div class="quote"><i class="fas fa-pen-fancy"></i> True respect is valuing something while you still have it.</div>
+<div class="quote box"><i class="fas fa-pen-fancy"></i> Decide firmly, work relentlessly.</div>
+<div class="quote box"><i class="fas fa-pen-fancy"></i> The best gift you can give is a smile.</div>
+<div class="quote box"><i class="fas fa-pen-fancy"></i> True respect is valuing something while you still have it.</div>
 </section>
 
 <!-- Billionaire Section -->
@@ -751,8 +770,8 @@ Whether it’s building influential personal brands, scaling tech products, or m
 <!-- Billionaire Section Images 1 -->
 <section class="section reveal-right">
 <h1 id="billionaire">Billionaire <i class="fas fa-crown"></i></h1><br>
-<img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3cfc1574187441.5c257f73dc292.jpg" class="cut3">
-<img src="https://s2.best-wallpaper.net/wallpaper/iphone/1801/Fashion-girl-street-glare_iphone_750x1334.jpg" class="cut3">
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3cfc1574187441.5c257f73dc292.jpg" class="cut9">
+<img src="https://s2.best-wallpaper.net/wallpaper/iphone/1801/Fashion-girl-street-glare_iphone_750x1334.jpg" class="cut9">
 </section>
 
 <!-- Billionaire Section Images 2 -->
