@@ -171,12 +171,12 @@ font-size:24px;font-weight:400;padding:6px 14px;border-radius:6px;display:inline
 .box:hover{transform:scale(1.08) rotate(-1deg);box-shadow:0 0 50px #ff004c;}
 
 /* hamburger icon */
-.menu-icon{display:none;font-size:22px;cursor:pointer;}
+/* .menu-icon{display:none;font-size:22px;cursor:pointer;}
 @media(max-width:900px){nav{padding:16px 25px;}.menu-icon{display:block;}.nav-links{position:absolute;top:70px;left:50%;transform:translateX(-50%);
 width:50%;background:transparent;backdrop-filter:blur(15px);border-radius:18px;flex-direction:column;gap:18px;padding:25px;
 display:none;text-align:right;animation:fadeIn .3s ease;opacity:0;transition:opacity .3s ease, transform .3s ease;}
 .nav-links.active{display:flex;opacity:1;transform:translateX(-50%) translateY(0);}}
-@keyframes fadeIn{from{opacity:0; transform:translateX(-50%) translateY(-10px);}to{opacity:1; transform:translateX(-50%) translateY(0);}}
+@keyframes fadeIn{from{opacity:0; transform:translateX(-50%) translateY(-10px);}to{opacity:1; transform:translateX(-50%) translateY(0);}} */
 
 /* CARDS */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;padding:120px 10%}
@@ -350,40 +350,98 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
 
   /* ---------- NAVBAR + HAMBURGER FIX ---------- */
   nav{
-    width: calc(100% - 20px);
-    left: 10px;
-    right: 10px;
-    top: 10px;
-    transform: none;
-    padding: 12px 14px;
     position: fixed;
-    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    padding: 14px 18px;
+    transform: none;
+    z-index: 1000;
+    box-sizing: border-box;
   }
 
-  /* HAMBURGER MENU */
-  .nav-links{
-    width: 100%;
-    left: 0;
-    transform: none;
-    max-height: calc(100vh - 70px);
-    overflow-y: auto;
+    body{
+    padding-top: 70px;   
   }
+
+  /* ---------- HAMBURGER ICON ---------- */
+.menu-icon {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* ---------- NAVBAR + HAMBURGER MENU FOR MOBILE ---------- */
+@media (max-width: 900px) {
+
+    nav {
+        padding: 16px 25px;
+        width: calc(100% - 20px);
+        left: 10px;
+        right: 10px;
+        top: 10px;
+        position: fixed;
+        z-index: 999;
+        background: rgba(255, 255, 255, 0.05); /* optional slight background */
+        backdrop-filter: blur(10px);           /* optional blur */
+        border-radius: 12px;                   /* optional rounded corners */
+    }
+
+    /* Show hamburger icon */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Dropdown menu */
+    .nav-links {
+        position: fixed;            /* scroll ke saath chipka rahe */
+        top: 70px;                  /* navbar ke neeche */
+        right: 16px;                /* RIGHT aligned */
+        left: auto;
+        width: 220px;               /* fixed width */
+        background: rgba(0, 0, 0, 0.35);   /* semi-transparent background */
+        backdrop-filter: blur(15px);
+        border-radius: 16px;
+        padding: 20px;
+        display: none;              /* default hidden */
+        flex-direction: column;
+        gap: 16px;
+        text-align: right;
+        z-index: 1001;
+        animation: slideDown .25s ease;
+    }
+
+    /* Show dropdown when active */
+    .nav-links.active {
+        display: flex;
+    }
+
+}
 
   nav ul{
     flex-direction: column;
     align-items: flex-end;
   }
 
-  #progress-bar,
-  .scroll-indicator{
-    position: fixed;       
-    top: 58px;              
+/* ---------- DROPDOWN ANIMATION ---------- */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- PROGRESS BAR ---------- */
+#progress-bar,
+.scroll-indicator {
+    position: fixed;   /* scroll ke saath chipka rahe */
+    top: 58px;         /* navbar ke neeche */
     left: 0;
     height: 3px;
     width: 0%;
-    z-index: 10000;   
-  }
-
+    background: #ff6b6b; /* example color */
+    z-index: 10000;    /* sabse upar */
+}
 
   /* ---------- HERO CONTENT OVERFLOW FIX ---------- */
   .hero{
@@ -394,7 +452,7 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
 
   /* PORTFOLIO TEXT SIZE  */
   .big-title{
-    font-size: 80px;
+    font-size: 75px;
     line-height: 1;
     word-break: break-word;
   }
@@ -402,7 +460,7 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
   /* ---------- JOIN ME COMMUNITY (ONLY FONT SIZE) ---------- */
   .stack .J1{font-size: 80px;}
   .stack .M2{font-size: 70px; margin-left: 0;}
-  .stack .C3{font-size: 60px; margin-left: 0;}
+  .stack .C3{font-size: 50px; margin-left: 0;}
   .stack{white-space: normal; text-align:center;}
 
   /* ---------- GALLERY (2–2 IMAGES PER ROW) ---------- */
@@ -421,7 +479,7 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
   .neo-right{
     grid-column: 1 / -1;
     grid-row: auto;
-    height: 90%;
+    height: auto;
   }
 
   /* second + third images side-by-side */
@@ -444,8 +502,8 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
   }
 
   .heroH-img img{
-    height: 420px;
-    max-width: 90%;
+    height: 500px;
+    max-width: 100%;
     margin: auto;
   }
 
@@ -460,15 +518,6 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
     right: 14px;
     bottom: 14px;
     padding: 10px 14px;
-  }
-
-  /* ---------- SCROLL PROGRESS BAR FIX (MOBILE) ---------- */
-  #progress-bar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    z-index: 9999;
   }
 
 }
