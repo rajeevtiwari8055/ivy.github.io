@@ -350,8 +350,8 @@ body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
 nav {
     position: fixed;           /* fix top */
     top: 20px;                 /* desktop top spacing */
-    left: 50%;
-    transform: translateX(-50%);
+    /* left: 50%;
+    transform: translateX(-50%); */
     z-index: 9999;
     display: flex;
     justify-content: space-between;
@@ -392,8 +392,8 @@ body {
 /* ---------------- Mobile Navbar ---------------- */
 @media(max-width:900px){
     nav {
-        padding: 16px 25px;       /* sirf mobile ke liye padding adjust */
-        width: 90%;               /* mobile screen ke hisab se width */
+        padding: 10px 20px;       /* sirf mobile ke liye padding adjust */
+        /* width: 90%;  */             /* mobile screen ke hisab se width */
         border-radius: 18px;      /* thoda chhota round corner */
     }
 
@@ -402,8 +402,8 @@ body {
    .nav-links {
     position: absolute;
     top: 60px;
-    right: 10px;
-    width: 220px;                  /* fixed width for dropdown */
+   /* right: 10px;
+    width: 220px; */                 /* fixed width for dropdown */
     background: rgba(0,0,0,0.75);  /* dark background */
     backdrop-filter: blur(10px);
     border-radius: 12px;
@@ -504,7 +504,8 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
   }
-   .zigzag { width: 95%; margin: 60px auto; }
+
+  .zigzag { width: 95%; margin: 60px auto; }
 
   /* ---------- BILLIONAIRE / IMAGE GRID SECTION ---------- */
 /* RESPONSIVE MOBILE */
@@ -559,23 +560,7 @@ body {
 /* Extra small mobile devices */
 .heroH h1 { font-size: 60px; }.heroH p { font-size: 18px; }.typing { font-size: 18px; }
 /* ---------- TOGGLE BUTTON VISIBLE ---------- */
-/* .theme-toggle{right: 14px;bottom: 14px;padding: 10px 14px;}} */
-
-    .theme-toggle {
-        position: fixed;   /* fixed position on screen */
-       /* thoda andar right se */
-        bottom: 12px;      /* thoda upar bottom se */
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.15); /* subtle glass effect */
-        backdrop-filter: blur(6px);
-        cursor: pointer;
-        z-index: 1000;
-        transition: 0.3s;
-    }
-
-        .theme-toggle:hover {
-        background: rgba(255, 255, 255, 0.25);
-    }}
+.theme-toggle{right: 14px;bottom: 14px;padding: 10px 14px;}}
 
 
 </style>
@@ -1222,3 +1207,5 @@ window.addEventListener("scroll", () => {
 
 </body>
 </html>
+
+ 
