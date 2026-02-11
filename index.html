@@ -249,6 +249,14 @@ body.light-mode .theme-toggle{background:#fff;color:#111;border-color:#ff004c;}
 .reveal-left{transform:translateX(-100px);}.reveal-right{transform:translateX(100px);}.reveal-top{transform:translateY(-100px);}.reveal-bottom{transform:translateY(100px);}
 /* Active state */
 .reveal-left.active,.reveal-right.active,.reveal-top.active,.reveal-bottom.active {opacity: 1;transform: translateX(0) translateY(0);} 
+/* Hide reveal animations on mobile (max-width: 900px) */
+@media (max-width: 900px) {
+    .reveal-left,
+    .reveal-right,
+    .reveal-top,
+    .reveal-bottom {
+        display: none !important;
+    }}
 
 /* ---------- IMAGE GRID ---------- */
 .gallery{background-color:#030712;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
@@ -392,7 +400,7 @@ body {
 /* ---------------- Mobile Navbar ---------------- */
 @media(max-width:900px){
     nav {
-        /* padding: 10px 20px; */      /* sirf mobile ke liye padding adjust */
+         padding: 10px 20px;      /* sirf mobile ke liye padding adjust */
         /* width: 90%;  */             /* mobile screen ke hisab se width */
         border-radius: 18px;      /* thoda chhota round corner */
     }
