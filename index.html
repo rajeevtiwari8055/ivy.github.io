@@ -150,7 +150,7 @@ body.light-mode .connect {background: #ffffff;   /* background white */}
 
 /* FOOTER */
 .site-footer{background:#000;padding:40px 80px 30px;color:#fff;}
-.footer-links strong{color:darkslategrey;display:block;margin-bottom:14px;font-size:16px;}
+.footer-links strong{color:grey;display:block;margin-bottom:14px;font-size:16px;}
 .footer-links a{display:block;width:max-content;margin:6px 0;color:#ff004c;text-decoration:none;position:relative;transition:0.3s;}
 .footer-links a::after,
 .dev-link::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:#ff004c;transition:0.4s;}
@@ -275,8 +275,8 @@ body.light-mode .note {background: #ff004c;}
 /* ---------- MOBILE VIEW: THANK YOU SECTION ---------- */
 @media (max-width: 900px) {.thanks .containerC {flex-direction: column;align-items: center;gap: 30px;}
 .note {width: 90%; padding: 40px 20px;clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 95%);}
-.note h1 {font-size: clamp(55px, 8vw, 70px);}
-.thank-note {font-size: clamp(16px, 6vw, 50px);}
+.note h1 {font-size: clamp(50px, 8vw, 70px);}
+.thank-note {font-size: clamp(16px);}
 .note::after {bottom: -20px;left: 40px;border-width: 12px;}
 .imageI {width: 90%;}
 .imageI img {width: 100%;height: auto;}}
@@ -429,6 +429,92 @@ body.light-mode .nav-links ul li a:hover {background: rgba(0, 0, 0, 0.05); color
 .heroH h1 { font-size: 60px; }.heroH p { font-size: 18px; }.typing { font-size: 18px; }
 /* ---------- TOGGLE BUTTON VISIBLE ---------- */
 .theme-toggle{right: 14px;bottom: 14px;padding: 10px 14px;}}
+
+
+
+
+
+/* ===== CENTER FUTURISTIC CORE ===== */
+.energy-core{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 220px;
+    height: 220px;
+    z-index: 0;
+    pointer-events: none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* Glow Ball */
+.energy-glow{
+    position:absolute;
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background: radial-gradient(circle, #ff004c 0%, transparent 70%);
+    filter: blur(25px);
+    animation: pulse 3s infinite alternate;
+}
+
+/* Rotating Ring */
+.energy-ring{
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    border:2px solid #ff004c;
+    animation: rotate 8s linear infinite;
+    box-shadow: 0 0 20px #ff004c;
+}
+
+/* Text */
+.energy-text{
+    font-size:14px;
+    letter-spacing:3px;
+    font-weight:600;
+    color:#ff004c;
+    animation: flicker 2s infinite alternate;
+}
+
+/* Animations */
+@keyframes rotate{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+@keyframes pulse{
+    from{transform: scale(1);}
+    to{transform: scale(1.15);}
+}
+
+@keyframes flicker{
+    from{opacity:0.6;}
+    to{opacity:1;}
+}
+
+/* DARK MODE (Default) */
+body{
+    background:#0a0a0a;
+}
+
+/* LIGHT MODE */
+body.light-mode .energy-glow{
+    background: radial-gradient(circle, #111 0%, transparent 70%);
+}
+
+body.light-mode .energy-ring{
+    border:2px solid #111;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+body.light-mode .energy-text{
+    color:#111;
+}
+
 
 </style>
 </head>
@@ -776,6 +862,14 @@ Whether it’s building influential personal brands, scaling tech products, or m
 <div class="quote box"><i class="fas fa-pen-fancy"></i> True respect is valuing something while you still have it.</div>
 </div>
 </section>
+
+<!-- Futuristic Center Energy -->
+<div class="energy-core">
+  <div class="energy-glow"></div>
+  <div class="energy-ring"></div>
+  <div class="energy-text">CREATIVE MIND</div>
+</div>
+
 
 <!-- Billionaire Section Images 1 -->
 <section class="section reveal-left">
