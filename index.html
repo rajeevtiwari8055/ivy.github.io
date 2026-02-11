@@ -430,89 +430,208 @@ body.light-mode .nav-links ul li a:hover {background: rgba(0, 0, 0, 0.05); color
 /* ---------- TOGGLE BUTTON VISIBLE ---------- */
 .theme-toggle{right: 14px;bottom: 14px;padding: 10px 14px;}}
 
-
-
-
-
 /* ===== CENTER FUTURISTIC CORE ===== */
-.energy-core{
+.quantum-core-fixed{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 220px;
-    height: 220px;
-    z-index: 0;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 998;   /* Navbar se kam, baaki sab se zyada */
     pointer-events: none;
-    display:flex;
-    align-items:center;
-    justify-content:center;
 }
 
-/* Glow Ball */
-.energy-glow{
+/* Glow */
+.quantum-glow{
     position:absolute;
-    width:150px;
-    height:150px;
+    width:160px;
+    height:160px;
     border-radius:50%;
     background: radial-gradient(circle, #ff004c 0%, transparent 70%);
-    filter: blur(25px);
-    animation: pulse 3s infinite alternate;
+    filter: blur(30px);
+    animation: quantumPulse 3s infinite alternate;
 }
 
-/* Rotating Ring */
-.energy-ring{
+/* Ring */
+.quantum-ring{
     position:absolute;
-    width:220px;
-    height:220px;
+    width:200px;
+    height:200px;
     border-radius:50%;
     border:2px solid #ff004c;
-    animation: rotate 8s linear infinite;
-    box-shadow: 0 0 20px #ff004c;
+    animation: quantumRotate 10s linear infinite;
+    box-shadow: 0 0 25px #ff004c;
 }
 
 /* Text */
-.energy-text{
-    font-size:14px;
-    letter-spacing:3px;
-    font-weight:600;
+.quantum-text{
+    font-size:15px;
+    letter-spacing:4px;
+    font-weight:700;
     color:#ff004c;
-    animation: flicker 2s infinite alternate;
+    animation: quantumFlicker 2s infinite alternate;
 }
 
 /* Animations */
-@keyframes rotate{
+@keyframes quantumRotate{
     from{transform: rotate(0deg);}
     to{transform: rotate(360deg);}
 }
 
-@keyframes pulse{
+@keyframes quantumPulse{
     from{transform: scale(1);}
-    to{transform: scale(1.15);}
+    to{transform: scale(1.2);}
 }
 
-@keyframes flicker{
+@keyframes quantumFlicker{
     from{opacity:0.6;}
     to{opacity:1;}
 }
 
-/* DARK MODE (Default) */
+/* ===== MOBILE VIEW ONLY ===== */
+@media (max-width: 900px){
+
+    .quantum-core-fixed{
+        width: 100px;
+        height: 100px;
+    }
+
+    .quantum-ring{
+        width: 100px;
+        height: 100px;
+        border: 1.5px solid #ff004c;
+    }
+
+    .quantum-glow{
+        width: 70px;
+        height: 70px;
+        filter: blur(18px);
+    }
+
+    .quantum-text{
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+}
+
+/* DARK MODE (Default)
 body{
     background:#0a0a0a;
+} */
+
+/* Animated SVG Connection Network */
+.energy-text-section{
+    padding:120px 40px;
+    background:black;
+    position:relative;
 }
 
-/* LIGHT MODE */
-body.light-mode .energy-glow{
-    background: radial-gradient(circle, #111 0%, transparent 70%);
+body.light-mode .energy-text-section{
+    background:#fff;
 }
 
-body.light-mode .energy-ring{
-    border:2px solid #111;
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+.energy-heading{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:80px;
+    background:linear-gradient(90deg,#ff004c,#ff7b00,#ff00ea);
+    -webkit-background-clip:text;
+    color:transparent;
+    animation: glow 4s infinite alternate;
 }
 
-body.light-mode .energy-text{
-    color:#111;
+/* TEXT WRAPPER */
+.text-wrapper{
+    position:relative;
+    height:400px;
+}
+
+/* TEXT STYLE SAME AS BIG TITLE */
+.energy-text{
+    position:absolute;
+    font-size:48px;
+    font-weight:800;
+
+    background:linear-gradient(90deg,#ff004c,#ff7b00,#ff00ea);
+    -webkit-background-clip:text;
+    color:transparent;
+
+    animation: glow 4s infinite alternate;
+}
+
+/* POSITIONS */
+.energy-text:nth-child(2){ top:20px; left:10%; }
+.energy-text:nth-child(3){ top:150px; left:30%; }
+.energy-text:nth-child(4){ top:60px; left:55%; }
+.energy-text:nth-child(5){ top:200px; left:75%; }
+.energy-text:nth-child(6){ top:300px; left:40%; }
+
+/* SAME GLOW AS HERO */
+@keyframes glow{
+    from{filter:drop-shadow(0 0 10px #ff004c)}
+    to{filter:drop-shadow(0 0 40px #ff00ea)}
+}
+
+/* SVG LINE */
+.text-line{
+    position:absolute;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+}
+
+.text-line path{
+    fill:none;
+    stroke:url(#textGrad);
+    stroke-width:2;
+    stroke-dasharray:8;
+    animation: moveLine 1s linear infinite;
+}
+
+@keyframes moveLine{
+    to{stroke-dashoffset:-20;}
+}
+
+/* ============================= */
+/* 📱 MOBILE VIEW (≤900px) */
+/* ============================= */
+@media (max-width:900px){
+
+    .energy-text-section{
+        padding:80px 20px;
+    }
+
+    .energy-heading{
+        font-size:24px;
+        font-weight:400px;
+        margin-bottom:50px;
+        text-align:center;
+    }
+
+    .text-wrapper{
+        height:300px;
+    }
+
+    .energy-text{
+        font-size:18px;
+        font-weight:400px;
+    }
+
+    /* Re-position text for mobile layout */
+    .energy-text:nth-child(2){ top:10px; left:5%; }
+    .energy-text:nth-child(3){ top:80px; left:15%; }
+    .energy-text:nth-child(4){ top:40px; left:50%; }
+    .energy-text:nth-child(5){ top:140px; left:60%; }
+    .energy-text:nth-child(6){ top:220px; left:30%; }
+
+    .text-line path{
+        stroke-width:1.5;
+    }
 }
 
 
@@ -547,6 +666,17 @@ body.light-mode .energy-text{
   <div id="current-date"></div>
   <div id="current-time"></div>
 </div>
+
+<!-- Futuristic Center Energy -->
+
+<!-- Quantum Fixed Core -->
+<div class="quantum-core-fixed">
+    <div class="quantum-glow"></div>
+    <div class="quantum-ring"></div>
+    <div class="quantum-text">CREATIVE MIND</div>
+</div>
+
+
 
 <!-- Hero Section-->
 <section class="hero" id="home">
@@ -660,6 +790,19 @@ Each project is crafted with a focus on measurable impact, creativity, and growt
 <div class="card"><i class="fas fa-compass"></i> Creative Direction</div>
 <div class="card"><i class="fas fa-film"></i> Visual Storytelling</div>
 </div>
+</section>
+
+<!-- Futuristic Center Energy -->
+<section class="energy-text-section">
+    <h2 class="energy-heading">Creative Flow <i class="fas fa-bezier-curve"></i></h2>
+    <div class="text-wrapper">
+        <svg class="text-line"></svg>
+        <div class="energy-text">Strategy <i class="fas fa-chess-king"></i></div>
+        <div class="energy-text">Branding <i class="fas fa-bullhorn"></i></div>
+        <div class="energy-text">Content <i class="fas fa-pen-nib"></i></div>
+        <div class="energy-text">Growth <i class="fas fa-arrow-trend-up"></i></div>
+        <div class="energy-text">Design <i class="fas fa-palette"></i></div>
+    </div>
 </section>
 
 <!-- Memories Section -->
@@ -862,14 +1005,6 @@ Whether it’s building influential personal brands, scaling tech products, or m
 <div class="quote box"><i class="fas fa-pen-fancy"></i> True respect is valuing something while you still have it.</div>
 </div>
 </section>
-
-<!-- Futuristic Center Energy -->
-<div class="energy-core">
-  <div class="energy-glow"></div>
-  <div class="energy-ring"></div>
-  <div class="energy-text">CREATIVE MIND</div>
-</div>
-
 
 <!-- Billionaire Section Images 1 -->
 <section class="section reveal-left">
@@ -1169,6 +1304,123 @@ setInterval(() => {
     morphIndex = (morphIndex + 1) % morphingTexts.length; // next text
   }, 300);
 }, 2000);
+
+
+
+
+
+
+
+
+
+window.addEventListener("load", () => {
+
+    const rings = document.querySelectorAll(".energy-ring");
+    const svg = document.querySelector(".connection-line");
+
+    const defs = document.createElementNS("http://www.w3.org/2000/svg","defs");
+    const gradient = document.createElementNS("http://www.w3.org/2000/svg","linearGradient");
+
+    gradient.setAttribute("id","gradLine");
+    gradient.innerHTML = `
+        <stop offset="0%" stop-color="#ff004c"/>
+        <stop offset="50%" stop-color="#ff7b00"/>
+        <stop offset="100%" stop-color="#ff00ea"/>
+    `;
+
+    defs.appendChild(gradient);
+    svg.appendChild(defs);
+
+    const path = document.createElementNS("http://www.w3.org/2000/svg","path");
+
+    function drawLine(){
+        let d = "";
+
+        rings.forEach((ring,index)=>{
+            const rect = ring.getBoundingClientRect();
+            const parentRect = svg.getBoundingClientRect();
+
+            const x = rect.left - parentRect.left + rect.width/2;
+            const y = rect.top - parentRect.top + rect.height/2;
+
+            if(index===0){
+                d += `M ${x} ${y}`;
+            } else {
+                d += ` L ${x} ${y}`;
+            }
+
+            if(index===rings.length-1){
+                const first = rings[0].getBoundingClientRect();
+                const fx = first.left - parentRect.left + first.width/2;
+                const fy = first.top - parentRect.top + first.height/2;
+                d += ` L ${fx} ${fy}`;
+            }
+        });
+
+        path.setAttribute("d",d);
+    }
+
+    drawLine();
+    svg.appendChild(path);
+
+    window.addEventListener("resize", drawLine);
+});
+
+    
+
+window.addEventListener("load", () => {
+
+    const texts = document.querySelectorAll(".energy-text");
+    const svg = document.querySelector(".text-line");
+
+    const defs = document.createElementNS("http://www.w3.org/2000/svg","defs");
+    const gradient = document.createElementNS("http://www.w3.org/2000/svg","linearGradient");
+
+    gradient.setAttribute("id","textGrad");
+    gradient.innerHTML = `
+        <stop offset="0%" stop-color="#ff004c"/>
+        <stop offset="50%" stop-color="#ff7b00"/>
+        <stop offset="100%" stop-color="#ff00ea"/>
+    `;
+
+    defs.appendChild(gradient);
+    svg.appendChild(defs);
+
+    const path = document.createElementNS("http://www.w3.org/2000/svg","path");
+
+    function drawLine(){
+        let d="";
+
+        texts.forEach((el,index)=>{
+            const rect = el.getBoundingClientRect();
+            const parent = svg.getBoundingClientRect();
+
+            const x = rect.left - parent.left + rect.width/2;
+            const y = rect.top - parent.top + rect.height/2;
+
+            if(index===0){
+                d += `M ${x} ${y}`;
+            } else {
+                d += ` L ${x} ${y}`;
+            }
+
+            if(index===texts.length-1){
+                const first = texts[0].getBoundingClientRect();
+                const fx = first.left - parent.left + first.width/2;
+                const fy = first.top - parent.top + first.height/2;
+                d += ` L ${fx} ${fy}`;
+            }
+        });
+
+        path.setAttribute("d",d);
+    }
+
+    drawLine();
+    svg.appendChild(path);
+    window.addEventListener("resize", drawLine);
+});
+
+  
 
 </script>
 
