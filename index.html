@@ -546,23 +546,22 @@ body {
 /* ---------------- Mobile Navbar ---------------- */
 @media(max-width:900px){
     nav {
-        padding: 16px 25px;       /* sirf mobile ke liye padding adjust */
-        width: 90%;               /* mobile screen ke hisab se width */
-        border-radius: 18px;      /* thoda chhota round corner */
+        width: calc(100% - 20px);      /* thoda chhota round corner */
     }
 
     .menu-icon {display: block;}
 
-   .nav-links {
+.nav-links {
     position: absolute;
     top: 60px;
     right: 10px;
     width: 220px;                  /* fixed width for dropdown */
-    background: rgba(0,0,0,0.75);  /* dark background */
+    max-width: calc(100% - 20px);  /* screen से बाहर न जाए */
+    background: rgba(0,0,0,0.75);
     backdrop-filter: blur(10px);
     border-radius: 12px;
-    display: none;                  /* hidden by default */
-    flex-direction: column;         /* column mode */
+    display: none;
+    flex-direction: column;
     gap: 15px;
     padding: 15px;
     text-align: left;
@@ -570,6 +569,7 @@ body {
     opacity: 0;
     transition: opacity .3s ease, transform .3s ease;
 }
+
 
 .nav-links.active {
     display: flex;
