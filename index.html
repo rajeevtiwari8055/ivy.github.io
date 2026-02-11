@@ -170,7 +170,7 @@ font-size:24px;font-weight:400;padding:6px 14px;border-radius:6px;display:inline
 .zigzag{clip-path:polygon(0 0,100% 8%,100% 92%,0 100%);width:80%;margin:80px auto;display:block;border:5px solid #ff00ea;border-radius:30px;box-shadow:0 0 30px #ff00ea;transition: transform 0.4s ease;}
 .zigzag:hover {transform: scale(1.1);}
 /* FLASHY BOXES */
-.container{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;padding:80px;}
+.container{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;padding:20px;}
 .box{padding:50px;background:linear-gradient(145deg,#1a1a1a,#000);border-radius:40px;text-align:center;transition:.6s;border:1px solid #ff004c;}
 .box:hover{transform:scale(1.08) rotate(-1deg);box-shadow:0 0 50px #ff004c;}
 
@@ -183,7 +183,7 @@ display:none;text-align:right;animation:fadeIn .3s ease;opacity:0;transition:opa
 @keyframes fadeIn{from{opacity:0; transform:translateX(-50%) translateY(-10px);}to{opacity:1; transform:translateX(-50%) translateY(0);}}
 
 /* CARDS */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;padding:120px 10%}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;padding:80px 10%}
 .card{padding:40px;border-radius:25px;background:#111;border:1px solid #ff004c;transition:.5s}
 .card:hover{transform:scale(1.07);box-shadow:0 0 50px #ff004c;}
 
@@ -195,7 +195,7 @@ display:none;text-align:right;animation:fadeIn .3s ease;opacity:0;transition:opa
 .gridbg{background-image:linear-gradient(#ffffff12 1px,transparent 1px),linear-gradient(90deg,#ffffff12 1px,transparent 1px);background-size:40px 40px}
 
 /* QUOTES */
-.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px;padding:110px 10%}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px;padding:20px 5%}
 .quote{padding:40px;border-radius:20px;background:linear-gradient(145deg,#222,#000);border:1px solid #ff004c}
 
 /* SHOWCASE CARDS */
@@ -262,7 +262,160 @@ body.light-mode .theme-toggle{background:#fff;color:#111;border-color:#ff004c;}
         transition: none !important; /* animation off */
         display: block !important;   /* height maintain ho */
         height: auto;                /* section occupy kare space */
-    }
+    }}
+
+    /* Big THANK YOU style */
+.thanks{
+  background:#081a3a;
+  padding:20px 20px;
+}
+
+/* Layout */
+.containerC{
+  display:flex;
+  align-items:center;
+  gap:40px; /* image se gap */
+}
+
+.note{
+  background:#ff004c;
+  color:white;
+  padding:70px;
+  flex:1;
+  position:relative;
+  transition: transform 0.4s ease;
+
+  /* angled shape */
+  clip-path: polygon(
+    0% 0%, 
+    100% 8%, 
+    100% 100%, 
+    0% 92%
+  );
+}
+
+/* Hover zoom */
+.note:hover{
+  transform: scale(1.1);
+}
+
+/* Speech tail */
+.note::after{
+  content:"";
+  position:absolute;
+  bottom:-40px;
+  left:80px;
+  border-width:20px;
+  border-style:solid;
+  border-color:#ff004c transparent transparent transparent;
+}
+
+/* Big THANK YOU style */
+/* H1 normal */
+.note h1{
+  font-size:clamp(70px,6vw,110px);
+  line-height:0.9;
+  margin:0;
+  font-weight:900;
+  letter-spacing:2px;
+  transition: transform 0.4s ease;
+}
+
+/* Hover pe zoom */
+.note:hover h1{
+  transform: scale(1.1);
+}
+
+/* Image container */
+.image{
+  overflow:hidden;
+  border-radius:10px;
+  transition: transform 0.4s ease;
+}
+
+/* Container zoom */
+.image:hover{
+  transform: scale(1.05);
+}
+
+/* Image */
+.image img{
+  width:420px;
+  height:auto;
+  border-radius:10px;
+  transition: transform 0.4s ease;
+}
+
+/* Image zoom */
+.image:hover img{
+  transform: scale(1.1);
+
+/* Thank note second line */
+.thank-note{
+  font-size:clamp(40px,4vw,70px);
+  font-weight:800;
+  margin:0;
+  letter-spacing:2px;
+  transition: transform 0.4s ease;
+}
+
+/* Hover zoom with box */
+.speech:hover .thank-note{
+  transform: scale(1.1);
+}}
+
+
+/* ===== Toggle Style: THANKS section for LIGHT MODE ===== */
+body.light-mode .thanks {
+    background: #ffffff;        /* THANKS box white */
+}
+
+body.light-mode .note {
+    background: #ff004c;        /* speech box red */
+    /* color: #ffffff; */       /* text color ko comment ya remove kar do */
+}
+
+/* ---------- MOBILE VIEW: THANK YOU SECTION ---------- */
+@media (max-width: 900px) {
+  .thanks .containerC {
+    flex-direction: column; /* box upar, image niche */
+    align-items: center;
+    gap: 30px; /* vertical spacing */
+  }
+
+  .note {
+    width: 90%;       /* mobile screen ke liye width */
+    padding: 40px 20px;  /* padding reduce */
+    clip-path: polygon(
+      0% 0%, 
+      100% 5%, 
+      100% 100%, 
+      0% 95%
+    );
+  }
+
+  .note h1 {
+    font-size: clamp(60px, 8vw, 70px); /* text responsive */
+  }
+
+  .thank-note {
+    font-size: clamp(30px, 6vw, 50px); /* second line responsive */
+  }
+
+  .note::after {
+    bottom: -20px;   /* tail smaller on mobile */
+    left: 40px;
+    border-width: 12px; /* smaller triangle */
+  }
+
+  .image {
+    width: 90%;      /* image responsive */
+  }
+
+  .image img {
+    width: 100%;     /* full container width */
+    height: auto;
+  }
 }
 
 
@@ -670,11 +823,13 @@ I help professionals and businesses grow their visibility and influence on Linke
 </section>
 
 <!-- About Me Cards Section -->
-<section class="cards reveal-left">
+<section class="reveal-left">
+<div class="cards">
 <div class="card"><i class="fas fa-chart-line"></i> 450K+ Impressions Content</div>
-<div class="card"><i class="fas fa-city"></i> Times Square Feature</div>
 <div class="card"><i class="fas fa-crown"></i> Topmate Top 1%</div>
+<div class="card"><i class="fas fa-city"></i> Times Square Feature</div>
 <div class="card"><i class="fas fa-graduation-cap"></i> US Graduate Dean Scholar</div>
+</div>
 </section>
 
 <!-- About Me Gallery Section -->
@@ -770,7 +925,7 @@ Each project is crafted with a focus on measurable impact, creativity, and growt
 </section>
 
 <!-- Achievements Section -->
-<section class="alt gridbg reveal-right">
+<section class="alt gridbg reveal-left">
 <div><h1 style="text-align: center;" id="achievements">Achievements <i class="fas fa-award"></i></h1><br> 
 <img src="https://godatenow.com/ladies/view/photo/b165619-3630ba9ab957e1bd8684386671930cb4.jpg" class="cut3 zigzag"></div>
 <p><strong style="font-size: 1.5rem; color: #ff004c;">Recognitions & Milestones: <i class="fas fa-flag-checkered"></i></strong><br><br>I’ve been fortunate to receive recognition for my work and contributions in technology, personal branding, and leadership. Each achievement reflects my commitment to helping individuals and companies grow, learn, and succeed.
@@ -791,11 +946,20 @@ Each milestone strengthens my mission to empower professionals and organizations
 </section>
 
 <!-- Achievements Images Section -->
-<section class="postsP reveal-left">
+<section class="postsP reveal-right">
 <img src="https://tse1.explicit.bing.net/th/id/OIP.UAZ-Q01vDDUkm88W1HjDywHaLH?w=900&h=1350&rs=1&pid=ImgDetMain&o=7&rm=3" class="cut3">
 <img src="https://i.pinimg.com/736x/e4/c3/28/e4c3285b2a0fe66b9939567beeb8610c.jpg" class="cut3">
 <img src="https://img.freepik.com/premium-photo/portrait-beautiful-brunette-luxurious-woman-with-beautiful-lips_120739-1039.jpg" class="cut3">
 <img src="https://tse3.mm.bing.net/th/id/OIP.w5MxDBoxfFLb35jos_MeNAHaPO?w=1440&h=2960&rs=1&pid=ImgDetMain&o=7&rm=3" class="cut3">
+</section>
+
+<!-- Testimonials Section  -->
+<section class="container reveal-left">
+<div class="cards">
+<div class="box"><i class="fas fa-pen-fancy"></i> LinkedIn Ghostwriting</div>
+<div class="box"><i class="fas fa-fingerprint"></i> Personal Branding</div>
+<div class="box"><i class="fas fa-chess"></i> Content Strategy</div>
+</div>
 </section>
 
 <!-- Testimonials Section -->
@@ -813,15 +977,9 @@ Each milestone strengthens my mission to empower professionals and organizations
 <p id="type-skill" style="font-size: 25px; font-family:'Dancing Script',cursive;font-weight: 400px; color:#ff004c;"></p>
 </section>
 
-<!-- Testimonials Section 2 -->
-<section class="container reveal-left">
-<div class="box"><i class="fas fa-pen-fancy"></i> LinkedIn Ghostwriting</div>
-<div class="box"><i class="fas fa-fingerprint"></i> Personal Branding</div>
-<div class="box"><i class="fas fa-chess"></i> Content Strategy</div>
-</section>
 
 <!-- Testimonials Section 3 -->
-<section class="testimonials-services reveal-right" id="testimonials">
+<section class="testimonials-services reveal-left" id="testimonials">
   <div class="container flex-container">
     <!-- Left Side: Services / Personal Branding Info -->
     <div class="services-left">
@@ -844,7 +1002,7 @@ Each milestone strengthens my mission to empower professionals and organizations
           <p>High-quality LinkedIn posts written for your profile.</p>
           <a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank" rel="noopener noreferrer" title="Connect on LinkedIn" class="btn-book">Book Now</a>
         </div>
-        <div class="service-card reveal-right">
+        <div class="service-card reveal-left">
           <h4>Content Strategy <i class="fas fa-chart-line"></i></h4>
           <p>Plan and optimize content to grow your professional network.</p>
           <a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank" rel="noopener noreferrer" title="Connect on LinkedIn" class="btn-book">Book Now</a>
@@ -872,7 +1030,7 @@ Each milestone strengthens my mission to empower professionals and organizations
           <h4 class="testimonial-author"><i class="far fa-comments"></i> Crystal</h4>
         </div>
 
-        <div class="testimonial-card reveal-left">
+        <div class="testimonial-card reveal-right">
           <img src="https://pixy.org/src/7/78764.jpg" alt="Ankit" class="testimonial-img">
           <p class="testimonial-text">
             "Amazing work! The project insights and dashboards were very clear and professional."
@@ -896,18 +1054,11 @@ Each milestone strengthens my mission to empower professionals and organizations
 </section>
 
 <!-- Testimonials Section Images -->
-<section class="posts reveal-left"> 
+<section class="posts reveal-right"> 
 <img src="https://tse4.mm.bing.net/th/id/OIP.kB9PUjlAEOqAwcr7BaDnLgHaQd?w=1080&h=2400&rs=1&pid=ImgDetMain&o=7&rm=3" class="cut5">
 <img src="https://images.hdqwalls.com/download/blonde-girl-in-depth-of-field-hd-rr-1080x1920.jpg" class="cut5">
 <img src="https://img.freepik.com/premium-photo/fashion-dress_1246590-1714.jpg" class="cut5">
 <img src="https://blog.step2love.com/wp-content/uploads/134866_ea55eb96.jpg" class="cut5">
-</section>
-
-<!-- Testimonials Quotes -->
-<section class="quotes reveal-right">
-<div class="quote box"><i class="fas fa-pen-fancy"></i> Decide firmly, work relentlessly.</div>
-<div class="quote box"><i class="fas fa-pen-fancy"></i> The best gift you can give is a smile.</div>
-<div class="quote box"><i class="fas fa-pen-fancy"></i> True respect is valuing something while you still have it.</div>
 </section>
 
 <!-- Billionaire Section -->
@@ -920,15 +1071,24 @@ Whether it’s building influential personal brands, scaling tech products, or m
 </div>
 </section>
 
+<!-- Testimonials Quotes -->
+<section class="quotes reveal-right">
+<div class="cards">
+<div class="quote box"><i class="fas fa-pen-fancy"></i> Decide firmly, work relentlessly.</div>
+<div class="quote box"><i class="fas fa-pen-fancy"></i> The best gift you can give is a smile.</div>
+<div class="quote box"><i class="fas fa-pen-fancy"></i> True respect is valuing something while you still have it.</div>
+</div>
+</section>
+
 <!-- Billionaire Section Images 1 -->
-<section class="section reveal-right">
+<section class="section reveal-left">
 <h1 id="billionaire">Billionaire <i class="fas fa-crown"></i></h1><br>
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3cfc1574187441.5c257f73dc292.jpg" class="cut9">
 <img src="https://s2.best-wallpaper.net/wallpaper/iphone/1801/Fashion-girl-street-glare_iphone_750x1334.jpg" class="cut9">
 </section>
 
 <!-- Billionaire Section Images 2 -->
-<section class="neo-grid-section reveal-left">
+<section class="neo-grid-section reveal-right">
   <div class="neo-grid-wrapper">
     <div class="neo-item neo-tall neo-left"><img src="https://images.pexels.com/photos/18185497/pexels-photo-18185497.jpeg?cs=srgb&dl=pexels-jos%C3%A9-cango-18185497.jpg&fm=jpg"></div>
     <div class="neo-item"><img src="https://wallpapers.com/images/hd/beautiful-girl-during-winter-gqctsy6q898vyea1.jpg"></div>
@@ -940,7 +1100,7 @@ Whether it’s building influential personal brands, scaling tech products, or m
 </section>
 
 <!-- Contact Me Section Images 2 -->
-<section class="connect reveal-right">
+<section class="connect reveal-left">
   <h2>CONNECT WITH ME<stron id="contact"></stron></h2><span><i class="fas fa-paper-plane"></i></span>
   <span id="mymail"></span><br><br>
   <div class="icons">
@@ -952,8 +1112,21 @@ Whether it’s building influential personal brands, scaling tech products, or m
   </div>
 </section>
 
+<section class="thanks reveal-right">  
+  <div class="containerC">
+    <!-- Speech Box -->
+    <div class="note">
+      <h1>THANK YOU<br>SO MUCH</h1><p class="thank-note"><i class="fas fa-heart"></i> So much for being here and supporting the journey.Your time, trust, and presence truly mean a lot to me.</p>
+    </div>
+    <!-- Image -->
+    <div class="image">
+      <img src="https://wallpaperaccess.com/full/8414678.jpg" alt="image" class="cut3 zigzag">
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER Section -->
-<footer class="site-footer reveal-left">
+<footer class="site-footer reveal-bottom">
   <div class="footer-top">
     <div class="footer-links">
       <strong>Quick Links <i class="fas fa-link"></i></strong>
