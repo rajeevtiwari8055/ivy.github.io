@@ -73,7 +73,7 @@ body.light-mode .linked-button {background: #fff;color: #111;border-color: #ff00
 
 /* JMC Intent STACK */
 /* .puzzle{padding:100px 10%;background:#f4f4f4;color:#b3261e} */
-.puzzle{padding:100px 10%;background:#fff;color:#ff004c;display:flex;align-items:center;gap:50px;}
+.puzzle{padding:100px 10%;background:#111;color:#ff004c;display:flex;align-items:center;gap:50px;}
 .puzzle-img{flex:0 0 45%; transition:transform 0.8s cubic-bezier(.22,1,.36,1);}
 .puzzle-img img{width:100%;height:auto;display:block;
 clip-path:polygon(0 0,92% 0,100% 50%,92% 100%,0 100%,6% 50%);filter:drop-shadow(0 25px 50px rgba(0,0,0,.25));}
@@ -87,8 +87,8 @@ clip-path:polygon(0 0,92% 0,100% 50%,92% 100%,0 100%,6% 50%);filter:drop-shadow(
 .puzzle-img{margin-top:40px;transition: transform 0.4s ease;}}
 .puzzle-img:hover {transform: scale(1.1);}
 /* Puzzle Section - Theme Toggle Fix */
-body.light-mode .puzzle {background:black;}
-body.light-mode .puzzle .stack .J1,body.light-mode .puzzle .stack .M2,body.light-mode .puzzle .stack .C3 {color: #00ffff;}
+body.light-mode .puzzle {background:#fff;}
+body.light-mode .puzzle .stack .J1,body.light-mode .puzzle .stack .M2,body.light-mode .puzzle .stack .C3 {color:#111;}
 body.light-mode .puzzle-img img {filter: brightness(0.85);}
 
 /* ABOUT */
@@ -117,25 +117,27 @@ linear-gradient(90deg,#ffffff20 1px,transparent 1px);background-size:30px 30px;z
 .alt{display:flex;align-items:center;gap:50px;padding:110px 10%;flex-wrap:wrap}
 .alt:nth-child(even){background:#111}
 .alt img{width:420px;border-radius:30px;clip-path:polygon(0 0,100% 10%,90% 100%,0 90%)}
-.alt p{max-width:500px;opacity:.85;font-size:18px;font-style:italic;}
+.alt p{max-width:500px;opacity:.85;font-size:16px;/*font-style:italic;*/}
 
 /* SPEECH SECTION */
 .speech{display:flex;align-items:center;gap:50px;padding:80px 10%;flex-wrap:wrap}
 .speech{background:#041733;padding:120px 10%;position:relative}
 .speech img{width:420px;border-radius:30px;clip-path:polygon(0 0,100% 10%,90% 100%,0 90%)}
-.speech p{max-width:500px;opacity:.85;font-size:18px;font-style:italic;}
+.speech p{max-width:500px;opacity:.85;font-size:16px;/*font-style:italic;*/}
 
 /* GRID POSTS */
 .posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;padding:100px 10%;background:#b3261e;color:#111}
 .posts img{width:100%;border-radius:25px}
 
 /* CONNECT */
-.connect {background: #fff;color: #ff004c;padding: 120px 12%;}
+.connect {background:#111;color: #ff004c;padding: 120px 12%;}
 .connect h2 {font-size: 70px;margin-bottom: 20px;}
 .icons a {text-decoration:none;color:#ff004c;margin: 0 10px;transition:transform 0.4s, color 0.4s;font-size:35px;display:inline-block;}
 .icons a:hover {color: black;animation: jump 0.6s ease;}
 @keyframes jump {0% { transform: scale(1) translateY(0); }25%  { transform: scale(1.1) translateY(-10px); }
 50% { transform: scale(1.3) translateY(-20px); }75%  { transform: scale(1.1) translateY(-10px); }100% { transform: scale(1) translateY(0); }}
+/* CONNECT section light mode background change */
+body.light-mode .connect {background: #ffffff;   /* background white */}
 
 /* TYPING MAIL*/
 #mymail{display: inline-block;font-family:'Montserrat', 'Poppins', sans-serif;font-size:1.1rem;font-weight:500;letter-spacing:0.8px;color:#ff004c;padding:6px 14px;border-radius:20px;border:1px solid #ff004c;position:relative;}
@@ -148,7 +150,7 @@ linear-gradient(90deg,#ffffff20 1px,transparent 1px);background-size:30px 30px;z
 
 /* FOOTER */
 .site-footer{background:#000;padding:40px 80px 30px;color:#fff;}
-.footer-links strong{color:grey;display:block;margin-bottom:14px;font-size:16px;}
+.footer-links strong{color:darkslategrey;display:block;margin-bottom:14px;font-size:16px;}
 .footer-links a{display:block;width:max-content;margin:6px 0;color:#ff004c;text-decoration:none;position:relative;transition:0.3s;}
 .footer-links a::after,
 .dev-link::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:#ff004c;transition:0.4s;}
@@ -162,7 +164,7 @@ linear-gradient(90deg,#ffffff20 1px,transparent 1px);background-size:30px 30px;z
 .dev-link:hover{color:#fff;}
 
 .typing-text{background:#000;color:#ff004c;font-family:'Fira Code', monospace;
-font-size:24px;font-weight:400;padding:6px 14px;border-radius:6px;display:inline-flex;align-items:center;}
+font-size:18px;font-weight:200;padding:6px 14px;border-radius:6px;display:inline-flex;align-items:center;}
 .cursor{margin-left:4px;animation:blink 1s infinite;}
 @keyframes blink{0%,50%,100%{opacity:1}25%,75%{opacity:0}}
 
@@ -234,12 +236,10 @@ body.light-mode .theme-toggle{background:#fff;color:#111;border-color:#ff004c;}
 .heroH h1{font-size:64px;font-weight:800;line-height:1.1;}
 .heroH h1 span{color:#000;background:#fff;padding:5px 12px;}
 .heroH p{margin-top:20px;font-size:18px;opacity:.9;}
-.typing{margin-top:25px;font-size:22px;font-weight:600;}
-/* .heroH-img{position:absolute;right:10%;bottom:0;}
-.heroH-img img{height:520px;filter:drop-shadow(0 20px 50px rgba(0,0,0,.6));} */
+.typing{margin-top:25px;font-size:20px;font-weight:600;}
 .heroH-img{position:absolute;right:8%;bottom:-20px;z-index:2;transform:rotate(-4deg);}
 .heroH-img img{height:600px;max-width:100%;display:block;filter:drop-shadow(0 30px 60px rgba(0,0,0,.45));transition:transform .6s ease, clip-path .6s ease;transform:rotate(-4deg) scale(1.08);
-/* 👇 stylish cut shape */clip-path:polygon(0 0,95% 3%,100% 100%,5% 97%);}
+ clip-path:polygon(0 0,95% 3%,100% 100%,5% 97%);}
 .heroH-img img:hover{transform:translateY(-8px) rotate(1.5deg);}
 .heroH-img::before{content:"";position:absolute;inset:-40px;background:radial-gradient(circle at center,rgba(255,255,255,.25),transparent 70%);filter:blur(40px);z-index:-1;}
 .heroH.scrolled { transform: translateY(-20px); }
@@ -252,172 +252,34 @@ body.light-mode .theme-toggle{background:#fff;color:#111;border-color:#ff004c;}
 /* Active state */
 .reveal-left.active,.reveal-right.active,.reveal-top.active,.reveal-bottom.active {opacity: 1;transform: translateX(0) translateY(0);} 
 /* Mobile: reveal animations ko hide karo, lekin section height preserve karo */
-@media (max-width: 900px) {
-    .reveal-left,
-    .reveal-right,
-    .reveal-top,
-    .reveal-bottom {
-        opacity: 1 !important;       /* visible rehna chahiye */
-        transform: none !important;  /* transform effect disable */
-        transition: none !important; /* animation off */
-        display: block !important;   /* height maintain ho */
-        height: auto;                /* section occupy kare space */
-    }}
-
-    /* Big THANK YOU style */
-.thanks{
-  background:#081a3a;
-  padding:20px 20px;
-}
-
-/* Layout */
-.containerC{
-  display:flex;
-  align-items:center;
-  gap:40px; /* image se gap */
-}
-
-.note{
-  background:#ff004c;
-  color:white;
-  padding:70px;
-  flex:1;
-  position:relative;
-  transition: transform 0.4s ease;
-
-  /* angled shape */
-  clip-path: polygon(
-    0% 0%, 
-    100% 8%, 
-    100% 100%, 
-    0% 92%
-  );
-}
-
-/* Hover zoom */
-.note:hover{
-  transform: scale(1.1);
-}
-
-/* Speech tail */
-.note::after{
-  content:"";
-  position:absolute;
-  bottom:-40px;
-  left:80px;
-  border-width:20px;
-  border-style:solid;
-  border-color:#ff004c transparent transparent transparent;
-}
+@media (max-width: 900px) {.reveal-left,.reveal-right,.reveal-top,.reveal-bottom {opacity: 1 !important;transform: none !important;transition: none !important; display: block !important;height: auto;}}
 
 /* Big THANK YOU style */
-/* H1 normal */
-.note h1{
-  font-size:clamp(70px,6vw,110px);
-  line-height:0.9;
-  margin:0;
-  font-weight:900;
-  letter-spacing:2px;
-  transition: transform 0.4s ease;
-}
-
-/* Hover pe zoom */
-.note:hover h1{
-  transform: scale(1.1);
-}
-
-/* Image container */
-.image{
-  overflow:hidden;
-  border-radius:10px;
-  transition: transform 0.4s ease;
-}
-
-/* Container zoom */
-.image:hover{
-  transform: scale(1.05);
-}
-
-/* Image */
-.image img{
-  width:420px;
-  height:auto;
-  border-radius:10px;
-  transition: transform 0.4s ease;
-}
-
-/* Image zoom */
-.image:hover img{
-  transform: scale(1.1);
-
-/* Thank note second line */
-.thank-note{
-  font-size:clamp(40px,4vw,70px);
-  font-weight:800;
-  margin:0;
-  letter-spacing:2px;
-  transition: transform 0.4s ease;
-}
-
-/* Hover zoom with box */
-.speech:hover .thank-note{
-  transform: scale(1.1);
-}}
-
-
+.thanks{background:#081a3a;padding:20px 20px;}
+.containerC{display:flex;justify-content: space-between; align-items:center;gap:40px; padding: 0 40px;}
+.note{background:#ff004c;color:white;padding:60px;flex:0.8;position:relative;transition: transform 0.4s ease;clip-path: polygon(0% 12%, 100% 0%, 100% 88%, 0% 100%);}
+.note:hover{transform: scale(1.08);}
+/* Speech tail */
+.note::after{content:"";position:absolute;bottom:-40px;left:80px;border-width:20px;border-style:solid;border-color:#ff004c transparent transparent transparent;}
+.note h1{font-size:clamp(60px,6vw,110px);line-height:0.9;margin:0;font-weight:900;letter-spacing:2px;transition: transform 0.4s ease;}
+.note:hover h1{transform: scale(1.05);}
+.imageI{overflow:hidden; margin-right: 20px; margin-left: auto; border-radius:10px;transition: transform 0.4s ease;}
+.imageI:hover{transform: scale(1.05);}
+.imageI img{width:420px;height:auto;border-radius:10px;transition: transform 0.4s ease;}
+.imageI:hover img{transform: scale(1.1);
+.thank-note{font-size:clamp(40px,4vw,70px);font-weight:800;margin:0;letter-spacing:2px;transition: transform 0.4s ease;}
+.speechS:hover .thank-note{transform: scale(1.1);}}
 /* ===== Toggle Style: THANKS section for LIGHT MODE ===== */
-body.light-mode .thanks {
-    background: #ffffff;        /* THANKS box white */
-}
-
-body.light-mode .note {
-    background: #ff004c;        /* speech box red */
-    /* color: #ffffff; */       /* text color ko comment ya remove kar do */
-}
-
+/* body.light-mode .thanks {background: #ffffff;} */
+body.light-mode .note {background: #ff004c;}
 /* ---------- MOBILE VIEW: THANK YOU SECTION ---------- */
-@media (max-width: 900px) {
-  .thanks .containerC {
-    flex-direction: column; /* box upar, image niche */
-    align-items: center;
-    gap: 30px; /* vertical spacing */
-  }
-
-  .note {
-    width: 90%;       /* mobile screen ke liye width */
-    padding: 40px 20px;  /* padding reduce */
-    clip-path: polygon(
-      0% 0%, 
-      100% 5%, 
-      100% 100%, 
-      0% 95%
-    );
-  }
-
-  .note h1 {
-    font-size: clamp(60px, 8vw, 70px); /* text responsive */
-  }
-
-  .thank-note {
-    font-size: clamp(30px, 6vw, 50px); /* second line responsive */
-  }
-
-  .note::after {
-    bottom: -20px;   /* tail smaller on mobile */
-    left: 40px;
-    border-width: 12px; /* smaller triangle */
-  }
-
-  .image {
-    width: 90%;      /* image responsive */
-  }
-
-  .image img {
-    width: 100%;     /* full container width */
-    height: auto;
-  }
-}
-
+@media (max-width: 900px) {.thanks .containerC {flex-direction: column;align-items: center;gap: 30px;}
+.note {width: 90%; padding: 40px 20px;clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 95%);}
+.note h1 {font-size: clamp(55px, 8vw, 70px);}
+.thank-note {font-size: clamp(16px, 6vw, 50px);}
+.note::after {bottom: -20px;left: 40px;border-width: 12px;}
+.imageI {width: 90%;}
+.imageI img {width: 100%;height: auto;}}
 
 /* ---------- IMAGE GRID ---------- */
 .gallery{background-color:#030712;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
@@ -509,228 +371,64 @@ body.light-mode .services-left,body.light-mode .testimonial-card,body.light-mode
 body.light-mode .testimonial-card,body.light-mode .service-card {background-color: #f0f0f0; /* Light background for both card types */}
 body.light-mode .testimonial-author {color: #ff004c; /* Accent stays same */}
 /* Responsive */
-@media (max-width: 900px) {
-.flex-container {flex-direction: column;}
-.testimonial-cards {grid-template-columns: 1fr; /* Single column on mobile */}}
-
+@media (max-width: 900px) {.flex-container {flex-direction: column;}.testimonial-cards {grid-template-columns: 1fr; /* Single column on mobile */}}
 
 /* NAVBAR MOBILE FIXED */
 /* ---------------- Desktop Navbar ---------------- */
-nav {
-    position: fixed;           /* fix top */
-    top: 20px;                 /* desktop top spacing */
-    /* left: 50%;
-    transform: translateX(-50%); */
-    z-index: 9999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6px 30px;         /* desktop padding */
-    border-radius: 30px;
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    border: 1px solid rgba(255,255,255,0.15);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
-}
-
+nav {position:fixed;top:10px; /* left:50%;transform:translateX(-50%); */z-index:9999;display:flex;justify-content:space-between;align-items:center;padding: 6px 30px; 
+border-radius:30px;background:rgba(255,255,255,0.08);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,0.15);box-shadow: 0 8px 30px rgba(0,0,0,0.35);}
 /* Progress Bar */
-#progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 5px;
-    background: #ff004c;
-    width: 0%;  /* JS scroll width handle karega */
-    z-index: 10000; /* navbar ke upar bhi rahe */
-}
-
+#progress-bar {position: fixed;top: 0;left: 0;height: 5px;background: #ff004c;width: 0%; z-index: 10000;}
 /* Hamburger icon for mobile */
-.menu-icon {
-    display: none;
-    font-size: 22px;
-    cursor: pointer;
-}
-
+.menu-icon {display: none;font-size: 22px;cursor: pointer;}
 /* Remove extra space below navbar */
-body {
-    margin: 0;
-    padding: 0;
-}
-
+body {margin: 0;padding: 0;}
 /* ---------------- Mobile Navbar ---------------- */
-@media(max-width:900px){
-    nav {
-         padding: 10px 20px;      /* sirf mobile ke liye padding adjust */
-        /* width: 90%;  */             /* mobile screen ke hisab se width */
-        border-radius: 18px;      /* thoda chhota round corner */
-    }
-
-    .menu-icon {display: block;}
-
-   .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    width: 220px;               /* fixed width for dropdown */
-    background: rgba(0,0,0,0.75);  /* dark background */
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    display: none;                  /* hidden by default */
-    flex-direction: column;         /* column mode */
-    gap: 15px;
-    padding: 15px;
-    text-align: left;
-    animation: fadeIn .3s ease;
-    opacity: 0;
-    transition: opacity .3s ease, transform .3s ease;
-}
-
-.nav-links.active {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-}
-
+@media(max-width:900px){nav {padding: 10px 20px; /* width: 90%;  */ border-radius: 30px;}
+.menu-icon {display: block;}
+.nav-links {position: absolute;top: 60px;right: 10px;width: 220px; background: rgba(0,0,0,0.75);backdrop-filter: blur(10px);border-radius: 12px;
+display: none;flex-direction: column;gap: 15px;padding: 15px;text-align: left;animation: fadeIn .3s ease;opacity: 0;transition: opacity .3s ease, transform .3s ease;}
+.nav-links.active {display: flex;opacity: 1;transform: translateY(0);}
 /* UL inside nav-links */
-.nav-links ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;   /* ensures row-wise items */
-    gap: 12px;                /* spacing between items */
-}
-
+.nav-links ul {list-style: none;margin: 0;padding: 0;display: flex;flex-direction: column;gap: 12px;}
 /* LI inside UL */
-.nav-links ul li {
-    width: 100%;              /* full width so each item is row */
-}
-
+.nav-links ul li {width: 100%;}
 /* Anchor links */
-.nav-links ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 6px 10px;
-    display: block;           /* ensures full row clickable */
-    transition: background 0.3s;
-}
-.nav-links ul li a:hover {
-    background: rgba(255,255,255,0.1);
-    border-radius: 6px;
-}
-
-}
-
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateX(-50%) translateY(-10px);}
-    to {opacity: 1; transform: translateX(-50%) translateY(0);}
-}
+.nav-links ul li a {color: #fff;text-decoration: none;padding: 6px 10px;display: block;transition: background 0.3s;}
+.nav-links ul li a:hover {background: rgba(255,255,255,0.1);border-radius: 6px;}}
+@keyframes fadeIn {from {opacity: 0; transform: translateX(-50%) translateY(-10px);}to {opacity: 1; transform: translateX(-50%) translateY(0);}}
 
 /* Hamburger Dropdown - Light Mode (Mobile Only) */
-@media (max-width: 900px) {
-    body.light-mode .nav-links {
-        background: rgba(255, 255, 255, 0.95); /* halka white background */
-    }
-
-    body.light-mode .nav-links ul li a {
-        color: #111 !important;               /* text color black */
-    }
-
-    /* Optional: hover effect */
-    body.light-mode .nav-links ul li a:hover {
-        background: rgba(0, 0, 0, 0.05);     /* halka hover effect */
-        color: #111 !important;
-    }
-}
-
+@media (max-width: 900px) {body.light-mode .nav-links {background: rgba(255, 255, 255, 0.95);}
+body.light-mode .nav-links ul li a {color: #111 !important;}
+/* Optional: hover effect */
+body.light-mode .nav-links ul li a:hover {background: rgba(0, 0, 0, 0.05); color: #111 !important;}}
 
 /* ================= MOBILE FIXES (≤900px ONLY) ================= */
 @media (max-width: 900px) {
-
-  /* ---------- HERO CONTENT OVERFLOW FIX ---------- */
-  .hero{
-    padding-left: 6%;
-    padding-right: 6%;
-    text-align: left;
-  }
-
-  /* PORTFOLIO TEXT SIZE  */
-  .big-title{
-    font-size: 70px;
-    line-height: 1;
-    word-break: break-word;
-  }
-
-  /* ---------- JOIN ME COMMUNITY (ONLY FONT SIZE) ---------- */
-  .stack .J1{font-size: 80px;}
-  .stack .M2{font-size: 70px; margin-left: 0;}
-  .stack .C3{font-size: 50px; margin-left: 0;}
-  .stack{white-space: normal; text-align:center;}
-
-  /* ---------- GALLERY (2–2 IMAGES PER ROW) ---------- */
-  .gallery{
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-  }
-
-  .zigzag { width: 95%; margin: 60px auto; }
-
-  /* ---------- BILLIONAIRE / IMAGE GRID SECTION ---------- */
-/* RESPONSIVE MOBILE */
-@media(max-width:900px){
-    .neo-grid-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr; 
-        grid-auto-rows: auto;           
-        gap: 16px;              
-    }
-
-    /* Tall images: full width, one per row */
-    .neo-left, .neo-right, .neo-tall {
-        grid-column: 1 / -1; /* full width of row */
-        grid-row: auto;      /* height automatic */
-    }
-
-    /* Wide images: 2 per row */
-    .neo-wide {
-        grid-column: span 1; /* 2 images per row */
-    }
-
-    /* Optional: adjust image height for tall images if needed */
-    .neo-left img, .neo-right img, .neo-tall img {
-        height: auto;        
-        width: 100%;
-    }
-}
-
+.hero{padding-left: 6%;padding-right: 6%;text-align: left;}
+.big-title{font-size: 70px;line-height: 1;word-break: break-word;}
+/* ---------- JOIN ME COMMUNITY (ONLY FONT SIZE) ---------- */
+.stack .J1{font-size: 80px;}.stack .M2{font-size: 70px; margin-left: 0;}.stack .C3{font-size: 55px; margin-left: 0;}.stack{white-space: normal; text-align:center;}
+/* ---------- GALLERY (2–2 IMAGES PER ROW) ---------- */
+.gallery{grid-template-columns: repeat(2, 1fr);gap: 18px;}
+.zigzag { width: 95%; margin: 60px auto; }
+/* ---------- BILLIONAIRE / IMAGE GRID SECTION ---------- */
+@media(max-width:900px){.neo-grid-wrapper {display: grid;grid-template-columns: 1fr 1fr; grid-auto-rows: auto;gap: 16px;}
+/* Tall images: full width, one per row */
+.neo-left, .neo-right, .neo-tall {grid-column: 1 / -1; grid-row: auto;}
+/* Wide images: 2 per row */.neo-wide {grid-column: span 1;}
+/* Optional: adjust image height for tall images if needed */
+.neo-left img, .neo-right img, .neo-tall img {height: auto; width: 100%;}}
 /* Hide LinkedIn proof image on mobile */
-@media (max-width: 900px) {
-    .neo-item.linkedin-img {
-        display: none;
-    }
-}
-
-  /* ---------- HERO IMAGE FIX ---------- */
-  .heroH-img{
-    position: relative;
-    right: 0;
-    bottom: 0;
-    margin-top: 40px;
-    text-align: center;
-  }
-
-  .heroH-img img{
-    height: 500px;
-    max-width: 100%;
-    margin: auto;
-  }
-
+@media (max-width: 900px) {.neo-item.linkedin-img {display: none;}}
+/* ---------- HERO IMAGE FIX ---------- */
+.heroH-img{position: relative;right: 0;bottom: 0;margin-top: 40px;text-align: center;}
+.heroH-img img{height: 500px;max-width: 100%;margin: auto;}
 /* Extra small mobile devices */
 .heroH h1 { font-size: 60px; }.heroH p { font-size: 18px; }.typing { font-size: 18px; }
 /* ---------- TOGGLE BUTTON VISIBLE ---------- */
 .theme-toggle{right: 14px;bottom: 14px;padding: 10px 14px;}}
-
 
 </style>
 </head>
@@ -780,7 +478,7 @@ body {
 <!-- JMC Section -->
 <section class="puzzle reveal-right">
   <div class="puzzle-img">
-    <img src="https://th.bing.com/th/id/R.20574068fa6452ceeeb2a106e000f386?rik=Ibohsb16%2bt3dwA&riu=http%3a%2f%2fthewowstyle.com%2fwp-content%2fuploads%2f2015%2f05%2fbeauty_women.jpg&ehk=wc%2fVpHfgmLBM1is%2b0q8X%2bqinMWbP4EKZ66iONTSOVdQ%3d&risl=&pid=ImgRaw&r=0" alt="image">
+    <img src="https://th.bing.com/th/id/R.34ba5ad9b8514c4a37c2a68ebec5dcde?rik=WwUwf5d0daoLCw&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f09%2fBeautiful-Girl-Pictures-And-Wallpapers.jpg&ehk=ahyZbyvk1do6%2f7ScK%2fMeiMI51uQm6Pb80Da4%2bdrjEok%3d&risl=&pid=ImgRaw&r=0" alt="image">
   </div>
 <div class="stack">
 <div class="J1">J<i class="fa-regular fa-face-smile"></i>IN</div>
@@ -866,7 +564,7 @@ I help professionals and businesses grow their visibility and influence on Linke
 * Product Management & Strategy Support: Assisted companies in aligning product positioning and marketing strategies with online visibility and thought leadership efforts.
 <br><br>
 Each project is crafted with a focus on measurable impact, creativity, and growth. Whether it’s boosting visibility, strengthening professional credibility, or connecting with the right audience, my work ensures tangible results and lasting professional value.</p>
-<img src="https://img.freepik.com/premium-photo/pretty-girl-landscape-photoshoot-tree_658768-91.jpg?w=2000" class="puzzle-img zigzag">
+ <img src="https://img.freepik.com/premium-photo/pretty-girl-landscape-photoshoot-tree_658768-91.jpg?w=2000" class="puzzle-img zigzag">
 </section>
 
 <!-- SERVICES Section -->
@@ -977,7 +675,6 @@ Each milestone strengthens my mission to empower professionals and organizations
 <p id="type-skill" style="font-size: 25px; font-family:'Dancing Script',cursive;font-weight: 400px; color:#ff004c;"></p>
 </section>
 
-
 <!-- Testimonials Section 3 -->
 <section class="testimonials-services reveal-left" id="testimonials">
   <div class="container flex-container">
@@ -1022,7 +719,7 @@ Each milestone strengthens my mission to empower professionals and organizations
       <div class="testimonial-cards">
 
         <!-- First Row -->
-        <div class="testimonial-card reveal-right">
+        <div class="testimonial-card reveal-top">
           <img src="https://thumbs.dreamstime.com/b/portrait-beautiful-young-woman-makeup-fashion-clothes%C3%B1%E2%80%9A-portrait-beautiful-young-woman-makeup-118348662.jpg" alt="Priya" class="testimonial-img">
           <p class="testimonial-text">
             "Ivy helped me showcase my LinkedIn profile perfectly! Highly recommended."
@@ -1030,7 +727,7 @@ Each milestone strengthens my mission to empower professionals and organizations
           <h4 class="testimonial-author"><i class="far fa-comments"></i> Crystal</h4>
         </div>
 
-        <div class="testimonial-card reveal-right">
+        <div class="testimonial-card reveal-top">
           <img src="https://pixy.org/src/7/78764.jpg" alt="Ankit" class="testimonial-img">
           <p class="testimonial-text">
             "Amazing work! The project insights and dashboards were very clear and professional."
@@ -1119,8 +816,8 @@ Whether it’s building influential personal brands, scaling tech products, or m
       <h1>THANK YOU<br>SO MUCH</h1><p class="thank-note"><i class="fas fa-heart"></i> So much for being here and supporting the journey.Your time, trust, and presence truly mean a lot to me.</p>
     </div>
     <!-- Image -->
-    <div class="image">
-      <img src="https://wallpaperaccess.com/full/8414678.jpg" alt="image" class="cut3 zigzag">
+    <div class="imageI img-grid-wrap">
+      <img src="https://wallpaperaccess.com/full/1856839.jpg" alt="image" class="cut3 zigzag">
     </div>
   </div>
 </section>
