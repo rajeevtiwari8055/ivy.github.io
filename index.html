@@ -227,7 +227,7 @@ body.light-mode .posts,body.light-mode .postsP{color:#111;}
 /* keep hero dark (intentional) */
 body.light-mode .hero{color:#fff;}
 /* THEME TOGGLE BUTTON */
-.theme-toggle{position:fixed;right:20px;bottom:20px;padding:12px 16px;border-radius:30px;background:#111;border:1px solid #ff004c;color:#ff004c;cursor:pointer;z-index:999;transition:.3s;}
+.theme-toggle{position:fixed;right:20px;bottom:50px;padding:12px 16px;border-radius:30px;background:#111;border:1px solid #ff004c;color:#ff004c;cursor:pointer;z-index:999;transition:.3s;}
 body.light-mode .theme-toggle{background:#fff;color:#111;border-color:#ff004c;}
 
 /* HERO padding-left: clamp(24px, 6vw, 100px);*/
@@ -269,8 +269,7 @@ body.light-mode .theme-toggle{background:#fff;color:#111;border-color:#ff004c;}
 .imageI:hover img{transform: scale(1.1);
 .thank-note{font-size:clamp(40px,4vw,70px);font-weight:800;margin:0;letter-spacing:2px;transition: transform 0.4s ease;}
 .speechS:hover .thank-note{transform: scale(1.1);}}
-/* ===== Toggle Style: THANKS section for LIGHT MODE ===== */
-/* body.light-mode .thanks {background: #ffffff;} */
+/* ===== Toggle Style: THANKS section for LIGHT MODE ===== *//* body.light-mode .thanks {background: #ffffff;} */
 body.light-mode .note {background: #ff004c;}
 /* ---------- MOBILE VIEW: THANK YOU SECTION ---------- */
 @media (max-width: 900px) {.thanks .containerC {flex-direction: column;align-items: center;gap: 30px;}
@@ -357,7 +356,7 @@ body.light-mode .note {background: #ff004c;}
 transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;overflow: hidden;}
 .testimonial-card:hover {transform: translateY(-12px);box-shadow: 0 20px 40px rgba(0,0,0,0.3);}
 /* Testimonial Image: Passport Rectangle */
-.testimonial-img {width: 60px;height: 80px;border-radius: 5px;border: 3px solid #ff004c;object-fit: cover;margin-bottom: 15px;transition: transform 0.3s ease;}
+.testimonial-img {width: 60px;height: 80px;border-radius: 5px;border: 1px solid #ff004c;object-fit: cover;margin-bottom: 15px;transition: transform 0.3s ease;}
 .testimonial-card:hover .testimonial-img {transform: scale(1.1);}
 /* Text */
 .testimonial-text {font-size: 1rem;line-height: 1.6;font-style: italic;margin-bottom: 15px;}
@@ -428,16 +427,16 @@ body.light-mode .nav-links ul li a:hover {background: rgba(0, 0, 0, 0.05); color
 /* Extra small mobile devices */
 .heroH h1 { font-size: 60px; }.heroH p { font-size: 18px; }.typing { font-size: 18px; }
 /* ---------- TOGGLE BUTTON VISIBLE ---------- */
-.theme-toggle{right: 14px;bottom: 14px;padding: 10px 14px;}}
+.theme-toggle{right: 14px;bottom: 30px;padding: 10px 14px;}}
 
 /* ===== CENTER FUTURISTIC CORE ===== */
-.quantum-core-fixed{position: fixed;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 150px;height: 150px;display: flex;align-items: center;justify-content: center;text-align: center;z-index: 998;pointer-events: none;}
+.quantum-core-fixed{position: fixed;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 180px;height: 180px;display: flex;align-items: center;justify-content: center;text-align: center;z-index: 998;pointer-events: none;}
 /* Glow */
-.quantum-glow{position:absolute;width:180px;height:180px;border-radius:50%;background: radial-gradient(circle, #ff004c 0%, transparent 70%);filter: blur(30px);animation: quantumPulse 3s infinite alternate;}
+.quantum-glow{position:absolute;width:150px;height:150px;border-radius:50%;background: radial-gradient(circle, #ff004c 0%, transparent 70%);filter: blur(30px);animation: quantumPulse 3s infinite alternate;}
 /* Ring */
-.quantum-ring{position:absolute;width:250px;height:250px;border-radius:50%;border:2px solid #ff004c;animation: quantumRotate 10s linear infinite;box-shadow: 0 0 25px #ff004c;}
+.quantum-ring{position:absolute;width:200px;height:200px;border-radius:50%;border:2px solid #ff004c;animation: quantumRotate 10s linear infinite;box-shadow: 0 0 25px #ff004c;}
 /* Text */
-.quantum-text{font-size:15px;letter-spacing:4px;font-weight:600;color:#ff004c;animation: quantumFlicker 2s infinite alternate;}
+.quantum-text{font-size:16px;letter-spacing:4px;font-weight:600;color:#ff004c;animation: quantumFlicker 2s infinite alternate;}
 /* Animations */
 @keyframes quantumRotate{from{transform: rotate(0deg);}to{transform: rotate(360deg);}}
 @keyframes quantumPulse{from{transform: scale(1);}to{transform: scale(1.2);}}
@@ -450,7 +449,7 @@ body.light-mode .nav-links ul li a:hover {background: rgba(0, 0, 0, 0.05); color
 .quantum-text{font-size: 10px;letter-spacing: 2px;}}
 
 /* Animated SVG LinkedIn Connection Network */
-.energy-text-section{padding:120px 40px;background:black;position:relative;}
+.energy-text-section{padding:120px 60px;background:black;position:relative;}
 body.light-mode .energy-text-section{background:#fff;}
 .energy-heading{text-align:center;font-size:42px;margin-bottom:80px;background:linear-gradient(90deg,#ff004c,#ff7b00,#ff00ea);-webkit-background-clip:text;color:transparent;animation: glow 4s infinite alternate;}
 /* TEXT WRAPPER */
@@ -472,19 +471,23 @@ body.light-mode .energy-text-section{background:#fff;}
 /* ============================= */
 /* 📱 MOBILE VIEW (≤900px) */
 /* ============================= */
-@media (max-width:900px){
+/*@media (max-width:900px){
 .energy-text-section{padding:50px 15px;}
 .energy-heading{font-size:24px;font-weight:400;margin-bottom:50px;text-align:center;}
 .text-wrapper{height:auto; min-height:350px;}
 .energy-text{font-size:20px;font-weight:400;}
-/* Re-position text for mobile layout */
+/* ---- Re-position text for mobile layout -------
 .energy-text:nth-child(2){ top:10px; left:5%; }
 .energy-text:nth-child(3){ top:80px; left:15%; }
 .energy-text:nth-child(4){ top:40px; left:50%; }
 .energy-text:nth-child(5){ top:140px; left:60%; }
 .energy-text:nth-child(6){ top:220px; left:30%; }
-.text-line path{stroke-width:3;}}
-/* body{overflow-x:hidden;} */
+.text-line path{stroke-width:3;}} body{overflow-x:hidden;} */
+@media (max-width:900px){
+/* Hide the entire energy text section on mobile */
+.energy-text-section {display: none;}
+/* Agar sirf specific text lines hide karna ho */
+.energy-text, .text-line {display: none;}}
 
 </style>
 </head>
@@ -519,15 +522,11 @@ body.light-mode .energy-text-section{background:#fff;}
 </div>
 
 <!-- Futuristic Center Energy -->
-
-<!-- Quantum Fixed Core -->
 <div class="quantum-core-fixed">
     <div class="quantum-glow"></div>
     <div class="quantum-ring"></div>
-    <div class="quantum-text">CREATIVE MIND</div>
+    <div class="quantum-text">CREATIVE MIND<i class="fas fa-lightbulb"></i></div>
 </div>
-
-
 
 <!-- Hero Section-->
 <section class="hero" id="home">
@@ -545,7 +544,7 @@ body.light-mode .energy-text-section{background:#fff;}
 <!-- JMC Section -->
 <section class="puzzle reveal-right">
   <div class="puzzle-img">
-    <img src="https://th.bing.com/th/id/R.34ba5ad9b8514c4a37c2a68ebec5dcde?rik=WwUwf5d0daoLCw&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f09%2fBeautiful-Girl-Pictures-And-Wallpapers.jpg&ehk=ahyZbyvk1do6%2f7ScK%2fMeiMI51uQm6Pb80Da4%2bdrjEok%3d&risl=&pid=ImgRaw&r=0" alt="image">
+    <img src="https://eskipaper.com/images/beautiful-girls-1.jpg" alt="image">
   </div>
 <div class="stack">
 <div class="J1">J<i class="fa-regular fa-face-smile"></i>IN</div>
@@ -645,7 +644,7 @@ Each project is crafted with a focus on measurable impact, creativity, and growt
 
 <!-- Futuristic Center Energy -->
 <section class="energy-text-section">
-    <h2 class="energy-heading">Creative Flow <i class="fas fa-bezier-curve"></i></h2>
+    <h2 class="energy-heading">Creative Flow <i class="fas fa-puzzle-piece"></i></h2>
     <div class="text-wrapper">
         <svg class="text-line"></svg>
         <div class="energy-text">Strategy <i class="fas fa-chess-king"></i></div>
@@ -745,13 +744,13 @@ Each milestone strengthens my mission to empower professionals and organizations
 <div class="img-grid-wrap">
 <h1 style="text-align: center;">Testimonials <i class="fas fa-comment-dots"></i></h1><br>  
 <img src="https://tse1.explicit.bing.net/th/id/OIP.pMcnHFF-OqJlwK3Re0x6uAHaPO?rs=1&pid=ImgDetMain&o=7&rm=3" class="cut3 zigzag"></div>
-<p>* Ivy transformed our LinkedIn presence, helping us reach the right audience. Her strategies are practical, effective, and easy to implement. Within weeks, our engagement and connections increased significantly.<br>– CEO, B2B Company
+<p>* Ivy transformed our LinkedIn presence, helping us reach the right audience. Her strategies are practical, effective, and easy to implement. Within weeks, our engagement and connections increased significantly.<br><strong>– CEO, B2B Company</strong>
 <br><br>
-* Her mentorship in AI and tech content boosted my visibility and credibility massively. She guided me step by step on thought leadership posts, audience analytics, and refining messaging. Thanks to Ivy, I’ve been invited to speak at industry panels and webinars.<br>– Product Manager, Startup
+* Her mentorship in AI and tech content boosted my visibility and credibility massively. She guided me step by step on thought leadership posts, audience analytics, and refining messaging. Thanks to Ivy, I’ve been invited to speak at industry panels and webinars.<br><strong>– Product Manager, Neon Startup</strong>
 <br><br>
-* Ivy’s approach to personal branding is unmatched. She makes complex strategies simple and actionable, helping craft a consistent online identity. From profile optimization to content strategy, every post adds value and strengthens professional reputation.<br>– Executive, Tech Firm
+* Ivy’s approach to personal branding is unmatched. She makes complex strategies simple and actionable, helping craft a consistent online identity. From profile optimization to content strategy, every post adds value and strengthens professional reputation.<br><strong>– Executive, Tech Firm</strong>
 <br><br>
-* Working with Ivy provided a clear roadmap for content growth, audience engagement, and network expansion. Her insights on content timing, optimization, and strategy are truly game-changing.<br>– Founder, Startup</p>
+* Working with Ivy provided a clear roadmap for content growth, audience engagement, and network expansion. Her insights on content timing, optimization, and strategy are truly game-changing.<br><strong>– Founder, Jaguar solutions</strong></p>
 <p id="type-skill" style="font-size: 25px; font-family:'Dancing Script',cursive;font-weight: 400px; color:#ff004c;"></p>
 </section>
 
@@ -760,7 +759,7 @@ Each milestone strengthens my mission to empower professionals and organizations
   <div class="container flex-container">
     <!-- Left Side: Services / Personal Branding Info -->
     <div class="services-left">
-      <h2 class="services-title">Ready to elevate your LinkedIn presence?</h2>
+      <h2 class="services-title"><i class="fas fa-bezier-curve"></i> Ready to elevate your LinkedIn presence?</h2>
       <p class="services-subtitle"><i class="fas fa-handshake"></i> Let's connect!</p>
       <div class="action-buttons">
         <a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank" rel="noopener noreferrer" title="Connect on LinkedIn" class="btn-primary">Book a Call <i class="fab fa-linkedin"></i></a>
@@ -777,17 +776,17 @@ Each milestone strengthens my mission to empower professionals and organizations
         <div class="service-card reveal-left">
           <h4>Ghostwriting <i class="fas fa-pen"></i></h4>
           <p>High-quality LinkedIn posts written for your profile.</p>
-          <a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank" rel="noopener noreferrer" title="Connect on LinkedIn" class="btn-book">Book Now</a>
+          <a href="https://www.linkedin.com/in/rajeevtiwari8055" style="color:#ff004c;" target="_blank" rel="noopener noreferrer" title="Connect on LinkedIn" class="btn-book">Book Now</a>
         </div>
         <div class="service-card reveal-left">
           <h4>Content Strategy <i class="fas fa-chart-line"></i></h4>
           <p>Plan and optimize content to grow your professional network.</p>
-          <a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank" rel="noopener noreferrer" title="Connect on LinkedIn" class="btn-book">Book Now</a>
+          <a href="https://www.linkedin.com/in/rajeevtiwari8055" style="color:#ff004c;" target="_blank" rel="noopener noreferrer" title="Connect on LinkedIn" class="btn-book">Book Now</a>
         </div>
         <div class="service-card reveal-left">
           <h4>LinkedIn Coaching <i class="fas fa-hand-holding-heart"></i></h4>
           <p>Personalized coaching sessions to improve your LinkedIn presence.</p>
-          <a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank" rel="noopener noreferrer" title="Connect on LinkedIn" class="btn-book">Book Now</a>
+          <a href="https://www.linkedin.com/in/rajeevtiwari8055" style="color:#ff004c;" target="_blank" rel="noopener noreferrer" title="Connect on LinkedIn" class="btn-book">Book Now</a>
         </div>
       </div>
     </div>
@@ -902,6 +901,11 @@ Whether it’s building influential personal brands, scaling tech products, or m
   </div>
 </section>
 
+<!-- Center Border Image -->
+<section class="reveal-left">
+<img src="images/girl.png" class="zigzag">
+</section>
+
 <!-- FOOTER Section -->
 <footer class="site-footer reveal-bottom">
   <div class="footer-top">
@@ -926,8 +930,8 @@ Whether it’s building influential personal brands, scaling tech products, or m
 <div class="footer-divider"></div>
 <div class="footer-bottom">
   <span>© <span id="year"></span> <span style="color: #ff004c;"> Ivy's</span> website | All rights reserved</span>
+  <span>Features of This <a href="about.html" target="_blank" class="dev-link"> Website <i class="fas fa-globe"></i></a></span>
   <span>Designed & Developed by<a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank" class="dev-link"> Rajeev Dataverse <i class="fab fa-linkedin-in"></i></a></span>
-  <span><a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank" class="dev-link"></a></span>
 </div>
 </footer>
 
@@ -1155,70 +1159,8 @@ setInterval(() => {
     morphIndex = (morphIndex + 1) % morphingTexts.length; // next text
   }, 300);
 }, 2000);
-
-
-
-
-
-
-
-
-
-window.addEventListener("load", () => {
-
-    const rings = document.querySelectorAll(".energy-ring");
-    const svg = document.querySelector(".connection-line");
-
-    const defs = document.createElementNS("http://www.w3.org/2000/svg","defs");
-    const gradient = document.createElementNS("http://www.w3.org/2000/svg","linearGradient");
-
-    gradient.setAttribute("id","gradLine");
-    gradient.innerHTML = `
-        <stop offset="0%" stop-color="#ff004c"/>
-        <stop offset="50%" stop-color="#ff7b00"/>
-        <stop offset="100%" stop-color="#ff00ea"/>
-    `;
-
-    defs.appendChild(gradient);
-    svg.appendChild(defs);
-
-    const path = document.createElementNS("http://www.w3.org/2000/svg","path");
-
-    function drawLine(){
-        let d = "";
-
-        rings.forEach((ring,index)=>{
-            const rect = ring.getBoundingClientRect();
-            const parentRect = svg.getBoundingClientRect();
-
-            const x = rect.left - parentRect.left + rect.width/2;
-            const y = rect.top - parentRect.top + rect.height/2;
-
-            if(index===0){
-                d += `M ${x} ${y}`;
-            } else {
-                d += ` L ${x} ${y}`;
-            }
-
-            if(index===rings.length-1){
-                const first = rings[0].getBoundingClientRect();
-                const fx = first.left - parentRect.left + first.width/2;
-                const fy = first.top - parentRect.top + first.height/2;
-                d += ` L ${fx} ${fy}`;
-            }
-        });
-
-        path.setAttribute("d",d);
-    }
-
-    drawLine();
-    svg.appendChild(path);
-
-    window.addEventListener("resize", drawLine);
-});
-
     
-
+// Animated SVG LinkedIn Connection Network 
 window.addEventListener("load", () => {
 
     const texts = document.querySelectorAll(".energy-text");
@@ -1270,8 +1212,6 @@ window.addEventListener("load", () => {
     svg.appendChild(path);
     window.addEventListener("resize", drawLine);
 });
-
-  
 
 </script>
 

@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajeev Dataverse! Premium Portfolio Overview</title>
+
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+/* THEME TOGGLING */
+body[data-theme="dark"] {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+body[data-theme="dark"] .card {
+  background: var(--card-dark);
+  color: inherit;
+}
+body[data-theme="dark"] .card h3 {
+  color: var(--purple);
+}
+
+body[data-theme="light"] {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+body[data-theme="light"] .card {
+  background: #f0f0f0;
+  color: var(--text-light);
+}
+body[data-theme="light"] .card h3 {
+  color: var(--purple); /* keep title violet */
+}
+
+/* THEME TOGGLE BUTTON */
+
+
+/* THEME TOGGLE BUTTON */
+.theme-toggle {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 15px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1001;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  transition: none; /* no hover effects */
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* SCROLL PROGRESS BAR */
+#progressBar{
+  position: fixed; top:0; left:0; height:4px; background: var(--purple);
+  width:0%; z-index:9999; transition: width 0.25s ease-out;
+}
+
+:root{
+  --purple:#ff004c;       /* new violet */
+  --purple-dark:#cc003f;  /* darker shade for hover / shadows */
+  --glass:rgba(255,0,76,0.15); /* light transparent violet for glass effects */
+
+    /* THEME VARIABLES */
+  --bg-dark: #000000;       /* dark mode body */
+  --text-dark: #ffffff;     /* dark mode text */
+  --card-dark: #111111;     /* dark mode card */
+
+  --bg-light: #ffffff;      /* light mode body */
+  --text-light: #000000;    /* light mode text */
+  --card-light: #dddddd;    /* light mode card */
+
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#000000; /* pure black */
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:14px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(255,0,76,0.15);
+  backdrop-filter:blur(14px);
+  z-index:1000;
+  box-shadow:0 5px 20px rgba(0,0,0,0.8);
+}
+nav h2{color:var(--purple);}
+nav ul{display:flex;list-style:none;gap:20px;}
+nav ul li a{text-decoration:none;color:#fff;font-size:14px;position:relative;transition:.3s;}
+nav ul li a::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--purple);transition:.4s;}
+nav ul li a:hover::after{width:100%;}
+nav ul li a:hover {color:var(--purple-dark);}
+.hamburger {display:none;font-size:24px;color:#fff;cursor:pointer;}
+
+/* HERO */
+#hero{
+  height:70vh;
+  background:
+    linear-gradient(
+      to right,
+      rgba(255,0,76,0.6),
+      rgba(255,0,76,0.6)
+    ),
+    url("https://images.unsplash.com/photo-1522252234503-e356532cafd5");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  text-align:center;
+  position:relative;
+  box-shadow: inset 0 -80px 120px rgba(0,0,0,0.7);
+}
+
+/* Glass effect container */
+#hero > div{
+  background: rgba(255,0,76,0.12);
+  backdrop-filter: blur(14px);
+  padding: 30px 45px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(255,0,76,0.25);
+}
+
+/* Text */
+#hero h1{
+  font-size:48px;
+  margin-bottom:10px;
+  animation:slideIn 1.5s ease;
+  color: #fff;
+}
+
+#hero p{
+  font-size:20px;
+  margin-top:5px;
+}
+
+/* SECTIONS */
+section{
+  padding:90px 80px;
+  position:relative;
+}
+section h2{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:40px;
+  position:relative;
+  color:var(--purple);
+}
+section h2::after{
+  content:"";
+  width:60px;
+  height:3px;
+  background:var(--purple);
+  display:block;
+  margin:10px auto 0;
+  border-radius:2px;
+}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;}
+.card{
+  background:#111111; /* dark grey */
+  backdrop-filter:blur(14px);
+  border-radius:22px;
+  padding:25px;
+  text-align:left;
+  transition:.5s;
+  position:relative;
+  overflow:hidden;
+  border:1px solid transparent;
+  color:inherit;
+}
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 35px 70px rgba(255,0,76,0.35);
+  border:1px solid var(--purple);
+  color:#fff;
+}
+.card h3{
+  margin-bottom:12px;
+  color:var(--purple);
+}
+.card ul{
+  list-style:disc inside;
+  margin-left:10px;
+}
+.card ul li{
+  margin-bottom:6px;
+  font-size:14px;
+  line-height:1.5em;
+}
+
+/* Footer */
+.site-footer{
+  background:#000;
+  padding:40px 80px 30px;
+  color:#fff;
+  text-align:center;
+}
+.site-footer p{margin-top:20px;font-size:14px;color:#fff;}
+
+/* Floating Dots Animation */
+.floating-dots span{
+  position:fixed;
+  width:6px;
+  height:6px;
+  background:var(--purple);
+  border-radius:50%;
+  animation:float 10s linear infinite;
+  opacity:.6;
+}
+.floating-dots span:nth-child(1){left:10%;animation-delay:0s;}
+.floating-dots span:nth-child(2){left:30%;animation-delay:2s;}
+.floating-dots span:nth-child(3){left:60%;animation-delay:4s;}
+.floating-dots span:nth-child(4){left:80%;animation-delay:6s;}
+@keyframes float{0%{bottom:-10px}100%{bottom:110%}}
+
+/* Typing Animation */
+.typing-text{
+  font-family:'Fira Code', monospace;
+  font-size:24px;
+  font-weight:500;
+  color:var(--purple);
+  background-color:#111;
+  font-weight:bold;
+  padding:5px 10px;
+  display:inline-block;
+  border-right:2px solid #fff;
+  white-space:nowrap;
+  overflow:hidden;
+  animation: blink 0.8s infinite;
+}
+@keyframes blink{
+  0%,50%,100%{ border-color:#fff; }
+  25%,75%{ border-color:transparent; }
+}
+
+/* Slide Animation */
+@keyframes slideIn{from{transform:translateX(-80px);opacity:0;}to{transform:translateX(0);opacity:1;}}
+
+/* Responsive */
+@media(max-width:900px){
+  section{padding:60px 20px;}
+  #hero h1{font-size:36px;}
+  #hero p{font-size:16px;}
+}
+
+/* Date-Time-Status display */
+.rt-date-time {
+  position: absolute;
+  top: 95px;
+  right: 20px;
+  text-align: right;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  color:inherit;
+  z-index: 10;
+  background: transparent;
+}
+
+.rt-date-time #current-date { font-size: 14px; font-weight: 300; }
+.rt-date-time #current-time { font-size: 14px; margin-top:2px; font-weight:300; }
+</style>
+
+</head>
+<body data-theme="dark">
+<!-- SCROLL PROGRESS BAR -->
+<div id="progressBar"></div>
+
+<!-- NAV -->
+<nav>
+  <h2 style="color: #fff;">Portfolio Overview</h2>
+    <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Date-Time-Status display -->
+<div class="rt-date-time">
+  <div id="current-date"></div>
+  <div id="current-time"></div>
+</div>
+
+<!-- Floating Dots -->
+<div class="floating-dots">
+  <span></span><span></span><span></span><span></span>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+<div>
+<h1>Rajeev Dataverse! <br>Digital Portfolio Solutions</h1>
+<span class="typing-text"></span>
+</div>
+</section>
+
+<!-- THEME TOGGLE BUTTON -->
+<button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-adjust"></i></button>
+
+<!-- FEATURES / SECTIONS -->
+<section id="features">
+<h2>Portfolio Design Showcase</h2>
+<div class="cards">
+
+<!-- Card 1 -->
+<div class="card">
+  <h3>Title/Overview</h3>
+  <ul>
+    <li>Feature-Rich Business & Personal Branding Portfolio</li>
+    <li>Designed for professionals, freelancers & business owners</li>
+    <li>Perfect for digital marketers and LinkedIn coaches</li>
+    <li>Enhances your online visibility and credibility</li>
+    <li>Strengthens your personal and professional brand</li>
+    <li>Built with advanced UI/UX and smooth animations</li>
+    <li>Helps you stand out in a competitive digital space</li>
+  </ul>
+</div>
+
+<!-- Card 2 -->
+<div class="card">
+  <h3>Project Overview</h3>
+  <ul>
+    <li>Modern, interactive and visually-rich personal branding portfolio</li>
+    <li>Designed for professionals, freelancers, digital marketers & LinkedIn coaches</li>
+    <li>Goes beyond traditional resumes with immersive digital storytelling</li>
+    <li>Builds credibility, authority and a strong online presence</li>
+    <li>Developed using HTML5, CSS3 and JavaScript with modern UI techniques</li>
+    <li>Features glassmorphism design, smooth animations and interactive elements</li>
+    <li>Fully responsive and optimized for mobile, tablet and desktop</li>
+    <li>Structured to enhance visibility, engagement and professional impact</li>
+  </ul>
+</div>
+
+<!-- Card 3 -->
+<div class="card">
+  <h3>Vision & Purpose</h3>
+  <ul>
+    <li>Strategically crafted to highlight skills, achievements and professional services</li>
+    <li>Amplifies personal branding and strengthens LinkedIn visibility</li>
+    <li>Showcases accomplishments to reinforce credibility and authority</li>
+    <li>Presents digital marketing and consulting services with clarity</li>
+    <li>Builds trust through testimonials, case studies and proven results</li>
+    <li>Creates immersive storytelling for deeper audience engagement</li>
+    <li>Establishes a strong, memorable and impactful digital identity</li>
+    <li>Designed as a dynamic brand presence — not just a static portfolio</li>
+  </ul>
+</div>
+
+<!-- Card 4 -->
+<div class="card">
+  <h3>Key Highlights</h3>
+  <ul>
+    <li>Interactive hero section with typing and glowing text effects</li>
+    <li>Elegant glassmorphic navigation bar and card-based UI system</li>
+    <li>Story-driven content flow for immersive user experience</li>
+    <li>Scroll-triggered reveal animations for dynamic engagement</li>
+    <li>Puzzle-style and stack-style interactive skill showcase</li>
+    <li>Dark & Light mode toggle for modern visual flexibility</li>
+    <li>Dynamic JavaScript-powered interactive components</li>
+    <li>Fully responsive, mobile-first grid layout design</li>
+  </ul>
+</div>
+
+<!-- Card 5 -->
+<div class="card">
+  <h3>Target Audience</h3>
+  <ul>
+    <li>LinkedIn professionals strengthening personal brand presence</li>
+    <li>Industry thought leaders building digital authority and influence</li>
+    <li>Branding and marketing strategists showcasing expertise and results</li>
+    <li>Startup founders establishing a strong and credible digital identity</li>
+    <li>Digital creators expanding professional reach and visibility</li>
+    <li>Coaches and mentors highlighting impact and success stories</li>
+    <li>Consultants and freelancers presenting structured service offerings</li>
+    <li>Business owners seeking a polished and trustworthy online presence</li>
+  </ul>
+</div>
+
+<!-- Card 6 -->
+<div class="card">
+  <h3>Why This Matters</h3>
+  <ul>
+    <li>Clarity over complexity — every element serves a defined purpose</li>
+    <li>Meaningful motion that enhances storytelling and guides attention</li>
+    <li>Balanced spacing and structured grid systems for visual harmony</li>
+    <li>Carefully controlled color palette for brand consistency</li>
+    <li>User-first design focused on accessibility and responsiveness</li>
+    <li>Intuitive interactions that create seamless navigation</li>
+    <li>Strategic design decisions that reinforce credibility and professionalism</li>
+    <li>Built to deliver both aesthetic impact and functional excellence</li>
+  </ul>
+</div>
+
+<!-- Card 7 -->
+<div class="card">
+  <h3>Website Structure Overview</h3>
+  <ul>
+    <li>Strategic storytelling flow: Identity → Expertise → Proof → Credibility → Connection</li>
+    <li>Conversion-focused hero section with dynamic headline and strong CTAs</li>
+    <li>About section designed to build emotional and professional connection</li>
+    <li>Interactive skills and services layout to clearly present value proposition</li>
+    <li>Projects, experience, and achievements structured for authority reinforcement</li>
+    <li>Testimonials and proof elements to strengthen trust and credibility</li>
+    <li>Humanized branding through visual gallery and mindset positioning</li>
+    <li>Clear contact pathway with seamless navigation and professional closure</li>
+  </ul>
+</div>
+
+<!-- Card 8 -->
+<div class="card">
+  <h3>Hero Section</h3>
+  <ul>
+    <li>Animated typing effect highlighting core expertise and positioning</li>
+    <li>Bold, glowing headline with modern gradient typography</li>
+    <li>Smooth text transitions for dynamic visual engagement</li>
+    <li>Strong call-to-action button for direct connection (LinkedIn / Contact)</li>
+    <li>Scroll-triggered reveal animations enhancing storytelling flow</li>
+    <li>Subtle hero resize and shrink effect on scroll for premium interaction</li>
+    <li>Strategically crafted first impression conveying clarity and authority</li>
+    <li>High-energy visual presentation designed to capture immediate attention</li>
+  </ul>
+</div>
+
+<!-- Card 9 -->
+<div class="card">
+  <h3>Navigation Bar</h3>
+  <ul>
+    <li>Glassmorphic design with semi-transparent rgba backgrounds</li>
+    <li>Frosted blur effect using backdrop-filter for modern aesthetics</li>
+    <li>Rounded corners with soft shadows for elevated visual depth</li>
+    <li>Smooth hover transitions enhancing interactivity</li>
+    <li>Responsive hamburger menu with subtle fade-in animation</li>
+    <li>Mobile-first navigation optimized for all screen sizes</li>
+    <li>Clean layout ensuring effortless and intuitive browsing</li>
+    <li>Designed to elevate overall user experience with modern UI precision</li>
+  </ul>
+</div>
+
+
+<!-- Card 10 -->
+<div class="card">
+  <h3>About Me Section</h3>
+  <ul>
+    <li>Modern two-column layout combining profile image and description</li>
+    <li>Elegant typography using Playfair Display with refined italic accents</li>
+    <li>Balanced spacing for clean and professional readability</li>
+    <li>Responsive flex-wrap structure optimized for smaller screens</li>
+    <li>Rounded corners on images and content cards for soft visual appeal</li>
+    <li>Strategically written narrative blending personality with professionalism</li>
+    <li>Designed to build emotional connection and personal credibility</li>
+    <li>Structured to position expertise without overwhelming the viewer</li>
+  </ul>
+</div>
+
+<!-- Card 11 -->
+<div class="card">
+  <h3>Work Section</h3>
+  <ul>
+    <li>Puzzle and stack-style layout for visually engaging skill representation</li>
+    <li>Large, bold typography to highlight core strengths with impact</li>
+    <li>Interactive hover effects including subtle rotations and translations</li>
+    <li>Structured layout designed for clarity and visual hierarchy</li>
+    <li>Fully responsive design optimized with media queries</li>
+    <li>Seamless integration with dark and light mode themes</li>
+    <li>Balanced spacing and alignment for clean presentation</li>
+    <li>Designed to visually communicate expertise with confidence</li>
+  </ul>
+</div>
+
+<!-- Card 12 -->
+<div class="card">
+  <h3>Card Hover Effects</h3>
+  <ul>
+    <li>Advanced card design with smooth scale transform effects</li>
+    <li>Dynamic hover animations for enhanced visual engagement</li>
+    <li>Soft colored shadow highlights for depth and premium feel</li>
+    <li>Interactive transitions that respond fluidly to user movement</li>
+    <li>Cards structured to showcase services, testimonials, and projects</li>
+    <li>Subtle motion effects to maintain professionalism without distraction</li>
+    <li>Balanced spacing and rounded corners for modern UI aesthetics</li>
+    <li>Designed to increase interaction and user attention retention</li>
+  </ul>
+</div>
+
+<!-- Card 13 -->
+<div class="card">
+  <h3>Button Interactions</h3>
+  <ul>
+    <li>Smooth hover color transitions for dynamic feedback</li>
+    <li>Subtle scaling and shadow effects on interaction</li>
+    <li>Designed for both dark and light mode compatibility</li>
+    <li>Mobile-friendly sizing for improved accessibility</li>
+    <li>Clear visual hierarchy for primary and secondary actions</li>
+    <li>Rounded edges for modern and approachable aesthetics</li>
+    <li>Fast transition timing for responsive user experience</li>
+    <li>Strategically placed CTAs to drive engagement and conversion</li>
+  </ul>
+</div>
+
+<!-- Card 14 -->
+<div class="card">
+  <h3>Navigation Experience</h3>
+  <ul>
+    <li>Strategic storytelling flow guiding visitors step by step</li>
+    <li>Structured journey: Introduction → Brand Story → Work → Proof → Contact</li>
+    <li>Designed to move users from awareness to meaningful action</li>
+    <li>Smooth section transitions enhancing content continuity</li>
+    <li>Logical content hierarchy for clarity and engagement</li>
+    <li>Navigation built to reinforce credibility and brand authority</li>
+    <li>Balanced pacing between information, proof, and inspiration</li>
+    <li>Conversion-focused flow encouraging interaction and connection</li>
+  </ul>
+</div>
+
+<!-- Card 15 -->
+<div class="card">
+  <h3>CSS Features</h3>
+  <ul>
+    <li>Glassmorphism UI with backdrop blur, soft shadows, and layered depth</li>
+    <li>Gradient typography and accent systems for strong visual branding</li>
+    <li>Advanced hover micro-interactions using transform and elevation effects</li>
+    <li>Scroll-triggered reveal animations supporting storytelling flow</li>
+    <li>Custom keyframe animations for glow, pulse, and motion energy</li>
+    <li>Responsive Grid and Flexbox architecture for adaptive layouts</li>
+    <li>Dark/Light theme toggle with smooth transition handling</li>
+    <li>Optimized pure CSS structure without heavy framework dependency</li>
+  </ul>
+</div>
+
+<!-- Card 16 -->
+<div class="card">
+  <h3>Design & Development Philosophy</h3>
+  <ul>
+    <li>Built on a seamless balance of design, interaction, and performance</li>
+    <li>Every styling and scripting decision is intentional and strategic</li>
+    <li>Clarity over complexity — purposeful animations without visual noise</li>
+    <li>Meaningful motion that enhances storytelling and guides attention</li>
+    <li>Visual precision through structured grids and balanced spacing</li>
+    <li>Controlled color systems ensuring harmony and brand consistency</li>
+    <li>User-first approach focused on accessibility and responsiveness</li>
+    <li>Scalable architecture designed for long-term growth and adaptability</li>
+  </ul>
+</div>
+
+<!-- Card 17 -->
+<div class="card">
+  <h3>UI / UX Approach</h3>
+  <ul>
+    <li>Clean, eye-friendly layout designed for effortless browsing</li>
+    <li>Consistent spacing and alignment ensuring visual balance</li>
+    <li>Minimal design approach without clutter or overload</li>
+    <li>Fluid scrolling with smooth and natural interaction flow</li>
+    <li>Responsive structure optimized for all screen sizes</li>
+    <li>Clear visual hierarchy guiding user attention strategically</li>
+    <li>Refined motion elements enhancing usability without distraction</li>
+    <li>Designed to reflect clarity, elegance, and modern professionalism</li>
+  </ul>
+</div>
+
+<!-- Card 18 -->
+<div class="card">
+  <h3>JavaScript Features</h3>
+  <ul>
+    <li>Dynamic typing and morphing text animations in the hero section</li>
+    <li>Scroll progress indicator reflecting real-time page position</li>
+    <li>Dark and light theme toggle with smooth state transitions</li>
+    <li>LocalStorage integration to preserve user preferences</li>
+    <li>Responsive hamburger menu for mobile navigation control</li>
+    <li>Scroll-reveal animations triggered on viewport entry</li>
+    <li>Smooth scrolling behavior for seamless anchor navigation</li>
+    <li>Automatic year and live date updates for dynamic footer content</li>
+  </ul>
+</div>
+
+<!-- Card 19 -->
+<div class="card">
+  <h3>Smart Contact Section</h3>
+  <ul>
+    <li>Click-to-call feature that instantly opens the dial pad</li>
+    <li>Email integration with prefilled subject and message</li>
+    <li>Jump and bounce hover animations on interactive icons</li>
+    <li>Subtle falling hover effects for dynamic visual feedback</li>
+    <li>Quick-access contact buttons for seamless communication</li>
+    <li>Frictionless user interaction designed for instant engagement</li>
+    <li>Mobile-optimized layout for effortless connectivity</li>
+    <li>Conversion-focused design encouraging direct action</li>
+  </ul>
+</div>
+
+<!-- Card 20 -->
+<div class="card">
+  <h3>Tools & Technologies Used</h3>
+  <ul>
+    <li>HTML5 for semantic structure, accessibility, and SEO-friendly markup</li>
+    <li>CSS3 for advanced styling, animations, gradients, and responsive layouts</li>
+    <li>Vanilla JavaScript for dynamic interactions and DOM manipulation</li>
+    <li>SVG and modern icon systems for scalable and sharp visual elements</li>
+    <li>Visual Studio Code as the primary development environment</li>
+    <li>Git and GitHub for version control and deployment management</li>
+    <li>Structured UI logic and content refinement supported by AI tools</li>
+    <li>Performance-focused architecture ensuring scalability and maintainability</li>
+  </ul>
+</div>
+
+<!-- Card 21 -->
+<div class="card">
+  <h3>Business Challenges Addressed</h3>
+  <ul>
+    <li>Elevates online authority in a highly competitive professional landscape</li>
+    <li>Increases visibility across LinkedIn and digital platforms</li>
+    <li>Reinforces credibility through structured achievements and proof of work</li>
+    <li>Builds trust using testimonials, case highlights, and social validation</li>
+    <li>Clearly communicates services with strong strategic positioning</li>
+    <li>Transforms passive visitors into active inquiries and connections</li>
+    <li>Aligns personal branding with measurable business growth objectives</li>
+    <li>Creates differentiation in competitive consulting and freelance markets</li>
+  </ul>
+</div>
+
+<!-- Card 22 -->
+<div class="card">
+  <h3>Roadmap & Future Expansion</h3>
+  <ul>
+    <li>Animated case study storytelling with advanced motion design</li>
+    <li>High-performance GSAP-powered animation enhancements</li>
+    <li>3D depth-based hover interactions for immersive UI effects</li>
+    <li>AI-powered assistant for guided and personalized interaction</li>
+    <li>Advanced SEO framework with structured metadata optimization</li>
+    <li>Integrated blog and newsletter funnel for content marketing growth</li>
+    <li>CMS-enabled version for dynamic and scalable content management</li>
+    <li>Built-in analytics dashboard for traffic and engagement insights</li>
+  </ul>
+</div>
+
+<!-- Card 23 -->
+<div class="card">
+  <h3>Overall Impression</h3>
+  <ul>
+    <li>Strategically engineered premium personal branding portfolio</li>
+    <li>Blends visual storytelling with structured narrative flow</li>
+    <li>Authority-driven positioning supported by proof and credibility elements</li>
+    <li>Integrated social proof to strengthen trust and validation</li>
+    <li>Conversion-focused engagement strategy guiding visitors to action</li>
+    <li>Smooth, modern, and high-performance UI/UX architecture</li>
+    <li>Designed to create lasting professional impact and recognition</li>
+    <li>More than a website — a complete digital brand ecosystem</li>
+  </ul>
+</div>
+
+<!-- Card 24 -->
+<div class="card">
+  <h3>Technical Impact & Future Enhancement</h3>
+  <ul>
+    <li>High-performance architecture powered by lightweight and optimized scripting</li>
+    <li>Semantic and structured development ensuring scalability and maintainability</li>
+    <li>Visually immersive UI with advanced interactive components</li>
+    <li>Fully responsive cross-device compatibility for consistent experience</li>
+    <li>Dynamic, real-time user interactions creating a living digital presence</li>
+    <li>Future-ready codebase designed for modular expansion and feature upgrades</li>
+    <li>Prepared for AI integration, advanced motion libraries, and API connectivity</li>
+    <li>Engineered to evolve into a scalable, enterprise-grade digital ecosystem</li>
+  </ul>
+</div>
+
+<!-- Card 24 -->
+<div class="card">
+<h3>Footer Design</h3>
+<ul>
+<li>Quick links for easy website navigation</li>
+<li>Privacy Policy for professional trust and transparency</li>
+<li>Terms & Conditions for compliance and credibility</li>
+<li>Hover underline effects for modern design appeal</li>
+<li>Elegant industry-level finishing for aesthetics</li>
+<li>Completes professional branding of the portfolio</li>
+</ul>
+</div>
+
+<!-- Card 25 -->
+<div class="card">
+  <h3>README Highlights</h3>
+  <ul>
+    <li>Well-structured project architecture including index.html, about.html, images folder, and README.md documentation</li>
+    <li>Comprehensive breakdown of advanced CSS techniques such as glassmorphism, gradients, clip-path, and responsive grids</li>
+    <li>Detailed overview of JavaScript functionality including typing effects, theme control, and scroll-based interactions</li>
+    <li>Clearly defined content hierarchy from Hero to Contact ensuring logical project flow</li>
+    <li>Organized asset management for images and UI components</li>
+    <li>GitHub-ready documentation showcasing technical depth and clarity</li>
+    <li>Professional presentation suitable for LinkedIn and client demonstrations</li>
+    <li>Structured explanation of UI logic, interaction design, and scalability planning</li>
+  </ul>
+</div>
+
+<!-- Card 26 -->
+<div class="card">
+<h3>Connect With Me</h3>
+<ul>
+<li>Let’s build professional digital identities together</li>
+<li>Designed for learners, professionals & future leaders</li>
+<li>Collaboration opportunities for portfolio enhancement</li>
+<li>Professional networking and skill visibility</li>
+<li>Encourages sharing knowledge and projects</li>
+<li>Builds a strong online presence for long-term growth</li>
+</ul>
+</div>
+
+<!-- Card 27 -->
+<div class="card">
+<h3>Thank You</h3>
+<ul>
+<li>Thank you for your time & attention</li>
+<li>Designed to help professionals stand out effectively</li>
+<li>Build credibility and represent skills confidently</li>
+<li>LinkedIn and beyond professional showcase</li>
+<li>Modern, elegant, industry-ready portfolio design</li>
+<li>Encourages further interaction & networking</li>
+<li>Leaves a lasting positive impression</li>
+</ul>
+</div>
+
+<!-- Card 28 -->
+<div class="card">
+  <h3>Client-Friendly Single File Architecture</h3>
+  <ul>
+  <li>Single-File Architecture – Entire website built in one HTML file with embedded CSS & JavaScript for simplicity and faster understanding.</li>
+  <li>GitHub-Ready Structure – Easy to clone, edit, and push updates directly from the repository without complexity.</li>
+  <li>Client-Editable Design – Clients can make required changes by editing only the index.html file confidently.</li>
+  <li>Minimal Folder Layout – Simple and organized structure with images, policy pages, and a clear README file.</li>
+  <li>Easy Maintenance & Upgrades – Centralized code allows quick updates, improvements, and future enhancements.</li>
+  <li>Beginner-Friendly & Professional – Clean, readable code suitable for both clients and developers.</li>
+  </ul>
+</div>
+
+<!-- Card 29 -->
+<div class="card">
+  <h3>Interactive Features of the Website</h3>
+  <ul>
+  <li>Experience Overview – Provides a clear preview of the website’s design quality and interaction flow.</li>
+  <li>Thoughtful Interactivity – Interactive elements are strategically placed to enhance user engagement.</li>
+  <li>Embedded Interactive Link – Redirects users to a fully functional website.</li>
+  <li>Premium User Experience – Smooth navigation with a clean and professional interface.</li>
+  <li>Feature Showcase – Highlights key properties, tools, and core functionalities.</li>
+  <li>Professional Presentation – Elegant layout supported by soft and smooth animations.</li>
+  <li>Client-Friendly Design – Easy to read, engaging, and simple to understand.</li>
+  <li>Immersive Interaction – Delivers a modern, high-quality digital experience.</li>
+  </ul>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="text-align:center;">
+<h2>Contact Me</h2>
+<p><a href="mailto:rajeevtiwari8055@gmail.com?subject=Hi%20Rajeev&body=I%20visited%20your%20website%20and%20wanted%20to%20connect%20with%20you!" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='#ff004c'" onmouseout="this.style.color='inherit'"><i class="fas fa-envelope"></i> rajeevtiwari8055@gmail.com↗</a></p>
+<p><a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='#ff004c'" onmouseout="this.style.color='inherit'"> <i class="fab fa-linkedin-in"></i> Rajeev Dataverse↗</a></p>
+<p><a href="https://rajeevtiwari8055.github.io/" target="_blank" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='#ff004c'" onmouseout="this.style.color='inherit'"><i class="fas fa-globe"></i> Website↗</a></p>
+<p><a href="https://github.com/rajeevtiwari8055" target="_blank" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='#ff004c'" onmouseout="this.style.color='inherit'"><i class="fab fa-github"></i> GitHub↗</a></p>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>© <span id="year"></span> <span style="color: #ff004c;">Rajeev Dataverse!</span> Digital Portfolio Solutions | All rights reserved</p>
+</footer>
+
+<script>
+  // Dynamic Year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script>
+// Typing Properties
+const text = "Interactive, Elegant & Professional";
+let idx = 0;
+let forward = true; // typing forward or backward
+
+function typingLoop(){
+  const el = document.querySelector('.typing-text');
+
+  if(forward){
+    el.innerHTML = text.substring(0, idx);
+    idx++;
+    if(idx > text.length){
+      forward = false;
+      setTimeout(typingLoop, 1000); // pause at end
+      return;
+    }
+  } else {
+    el.innerHTML = text.substring(0, idx);
+    idx--;
+    if(idx < 0){
+      forward = true;
+      setTimeout(typingLoop, 500); // pause at start
+      return;
+    }
+  }
+  setTimeout(typingLoop, 100);
+}
+
+window.onload = typingLoop;
+</script>
+
+<script>
+  // Date & Time (Home)
+  function updateDateTime() {
+    const now = new Date();
+
+    const dateOptions = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    };
+
+    const dateString = now.toLocaleDateString("en-US", dateOptions);
+
+    const timeString = now.toLocaleTimeString("en-US", {
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      hour12: true
+    });
+
+    document.getElementById("current-date").innerText = dateString;
+    document.getElementById("current-time").innerText = timeString;
+  }
+
+  setInterval(updateDateTime, 1000);
+  updateDateTime();
+</script>
+
+<script>
+  // Navigation bar
+function toggleMenu(){
+  const navLinks = document.querySelector("nav ul.nav-links");
+  navLinks.classList.toggle("show");
+}
+
+// THEME TOGGLE
+// function toggleTheme(){document.body.dataset.theme=document.body.dataset.theme==="dark"?"light":"dark";}
+
+function toggleTheme() {
+  const body = document.body;
+  const btn = document.querySelector('.theme-toggle');
+
+  if (body.dataset.theme === "dark") {
+    // Switch to light theme
+    body.dataset.theme = "light";
+    btn.innerHTML = '<i class="fas fa-sun"></i> Toggle Theme'; // sun icon + text
+    btn.style.background = "#fff"; // button bg white
+    btn.style.color = "#000";       // text black
+  } else {
+    // Switch to dark theme
+    body.dataset.theme = "dark";
+    btn.innerHTML = '<i class="fas fa-moon"></i> Toggle Theme'; // moon icon + text
+    btn.style.background = "#000";      // button bg black
+    btn.style.color = "#ff004c";        // text violet for dark theme
+  }
+}
+
+// Set initial button state on page load
+window.onload = function() {
+  const btn = document.querySelector('.theme-toggle');
+  btn.innerHTML = '<i class="fas fa-moon"></i> Toggle Theme'; // default
+  btn.style.background = "#000";  // black bg
+  btn.style.color = "#ff004c";    // violet text
+}
+
+// SCROLL PROGRESS
+window.onscroll=function(){
+  const winScroll=document.body.scrollTop || document.documentElement.scrollTop;
+  const height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  const scrolled=(winScroll/height)*100;
+  document.getElementById("progressBar").style.width=scrolled+"%";
+}
+
+</script>
+
+</body>
+</html>
