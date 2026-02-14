@@ -62,7 +62,7 @@ display:flex;flex-direction:column;justify-content:center;padding-left:10%;paddi
 @keyframes slideInLeft {from {transform: translateX(-150px);opacity: 0;}to {transform: translateX(0);opacity: 1;}}
 
 /* ===== Linked Button for Hero Section ===== */
-.linked-button {display: inline-block;padding: 12px 30px;border-radius: 30px;background: #111;border: 1px solid #ff004c;color: #ff004c;cursor: pointer;transition: .3s;font-size: 18px;text-align: center;width:auto;min-width: 100px;max-width: 200px;}
+.linked-button {display: inline-block;padding: 10px 30px;border-radius: 30px;background: #111;border: 1px solid #ff004c;color: #ff004c;cursor: pointer;transition: .3s;font-size: 18px;text-align: center;width:auto;min-width: 100px;max-width: 200px;}
 body.light-mode .linked-button {background: #fff;color: #111;border-color: #ff004c;}
 .linked-button:hover {background: #ff004c;color: #fff;border-color: #ff004c;}
 
@@ -251,7 +251,7 @@ body.light-mode .theme-toggle{background:#fff;color:#111;border-color:#ff004c;}
 .reveal-left{transform:translateX(-100px);}.reveal-right{transform:translateX(100px);}.reveal-top{transform:translateY(-100px);}.reveal-bottom{transform:translateY(100px);}
 /* Active state */
 .reveal-left.active,.reveal-right.active,.reveal-top.active,.reveal-bottom.active {opacity: 1;transform: translateX(0) translateY(0);} 
-/* Mobile: reveal animations ko hide karo, lekin section height preserve karo */
+/* Mobile: reveal animations hide, section height preserve */
 @media (max-width: 900px) {.reveal-left,.reveal-right,.reveal-top,.reveal-bottom {opacity: 1 !important;transform: none !important;transition: none !important; display: block !important;height: auto;}}
 
 /* Big THANK YOU style */
@@ -277,8 +277,10 @@ body.light-mode .note {background: #ff004c;}
 .note h1 {font-size: clamp(50px, 8vw, 70px);}
 .thank-note {font-size: clamp(16px);}
 .note::after {bottom: -20px;left: 40px;border-width: 12px;}
-.imageI {width: 90%;}
-.imageI img {width: 100%;height: auto;}}
+/* .imageI {width: 90%;}
+.imageI img {width: 100%;height: auto;}} */
+.imageI {display: none;}
+.imageI img {display: none;}}
 
 /* ---------- IMAGE GRID ---------- */
 .gallery{background-color:#030712;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
@@ -427,7 +429,7 @@ body.light-mode .nav-links ul li a:hover {background: rgba(0, 0, 0, 0.05); color
 /* Extra small mobile devices */
 .heroH h1 { font-size: 60px; }.heroH p { font-size: 18px; }.typing { font-size: 18px; }
 /* ---------- TOGGLE BUTTON VISIBLE ---------- */
-.theme-toggle{right: 14px;bottom: 30px;padding: 10px 14px;}}
+.theme-toggle{right: 14px;bottom: 60px;padding: 10px 14px;}}
 
 /* ===== CENTER FUTURISTIC CORE ===== */
 .quantum-core-fixed{position: fixed;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 180px;height: 180px;display: flex;align-items: center;justify-content: center;text-align: center;z-index: 998;pointer-events: none;}
@@ -643,7 +645,7 @@ Each project is crafted with a focus on measurable impact, creativity, and growt
 </section>
 
 <!-- Futuristic Center Energy -->
-<section class="energy-text-section">
+<section class="energy-text-section reveal-right">
     <h2 class="energy-heading">Creative Flow <i class="fas fa-puzzle-piece"></i></h2>
     <div class="text-wrapper">
         <svg class="text-line"></svg>
@@ -656,7 +658,7 @@ Each project is crafted with a focus on measurable impact, creativity, and growt
 </section>
 
 <!-- Memories Section -->
-<section id="memories" class="uxgrid-section reveal-right">
+<section id="memories" class="uxgrid-section reveal-left">
   <div class="uxgrid-card">
     <h2 class="uxgrid-title">Memories <i class="fa-regular fa-bookmark"></i></h2>
     
@@ -702,7 +704,7 @@ Each project is crafted with a focus on measurable impact, creativity, and growt
 </section>
 
 <!-- Achievements Section -->
-<section class="alt gridbg reveal-left">
+<section class="alt gridbg reveal-right">
 <div><h1 style="text-align: center;" id="achievements">Achievements <i class="fas fa-award"></i></h1><br> 
 <img src="https://godatenow.com/ladies/view/photo/b165619-3630ba9ab957e1bd8684386671930cb4.jpg" class="cut3 zigzag"></div>
 <p><strong style="font-size: 1.5rem; color: #ff004c;">Recognitions & Milestones: <i class="fas fa-flag-checkered"></i></strong><br><br>I’ve been fortunate to receive recognition for my work and contributions in technology, personal branding, and leadership. Each achievement reflects my commitment to helping individuals and companies grow, learn, and succeed.
@@ -723,7 +725,7 @@ Each milestone strengthens my mission to empower professionals and organizations
 </section>
 
 <!-- Achievements Images Section -->
-<section class="postsP reveal-right">
+<section class="postsP reveal-left">
 <img src="https://tse1.explicit.bing.net/th/id/OIP.UAZ-Q01vDDUkm88W1HjDywHaLH?w=900&h=1350&rs=1&pid=ImgDetMain&o=7&rm=3" class="cut3">
 <img src="https://i.pinimg.com/736x/e4/c3/28/e4c3285b2a0fe66b9939567beeb8610c.jpg" class="cut3">
 <img src="https://img.freepik.com/premium-photo/portrait-beautiful-brunette-luxurious-woman-with-beautiful-lips_120739-1039.jpg" class="cut3">
@@ -731,7 +733,7 @@ Each milestone strengthens my mission to empower professionals and organizations
 </section>
 
 <!-- Testimonials Section  -->
-<section class="container reveal-left">
+<section class="container reveal-right">
 <div class="cards">
 <div class="box"><i class="fas fa-pen-fancy"></i> LinkedIn Ghostwriting</div>
 <div class="box"><i class="fas fa-fingerprint"></i> Personal Branding</div>
@@ -740,22 +742,22 @@ Each milestone strengthens my mission to empower professionals and organizations
 </section>
 
 <!-- Testimonials Section -->
-<section class="alt reveal-right">
+<section class="alt reveal-left">
 <div class="img-grid-wrap">
 <h1 style="text-align: center;">Testimonials <i class="fas fa-comment-dots"></i></h1><br>  
 <img src="https://tse1.explicit.bing.net/th/id/OIP.pMcnHFF-OqJlwK3Re0x6uAHaPO?rs=1&pid=ImgDetMain&o=7&rm=3" class="cut3 zigzag"></div>
-<p>* Ivy transformed our LinkedIn presence, helping us reach the right audience. Her strategies are practical, effective, and easy to implement. Within weeks, our engagement and connections increased significantly.<br><strong>– CEO, B2B Company</strong>
+<p>* Ivy transformed our LinkedIn presence, helping us reach the right audience. Her strategies are practical, effective, and easy to implement. Within weeks, our engagement and connections increased significantly.<br><strong style="color:#ff004c;">– CEO, B2B Company</strong>
 <br><br>
-* Her mentorship in AI and tech content boosted my visibility and credibility massively. She guided me step by step on thought leadership posts, audience analytics, and refining messaging. Thanks to Ivy, I’ve been invited to speak at industry panels and webinars.<br><strong>– Product Manager, Neon Startup</strong>
+* Her mentorship in AI and tech content boosted my visibility and credibility massively. She guided me step by step on thought leadership posts, audience analytics, and refining messaging. Thanks to Ivy, I’ve been invited to speak at industry panels and webinars.<br><strong style="color:#ff004c;">– Product Manager, Neon Startup</strong>
 <br><br>
-* Ivy’s approach to personal branding is unmatched. She makes complex strategies simple and actionable, helping craft a consistent online identity. From profile optimization to content strategy, every post adds value and strengthens professional reputation.<br><strong>– Executive, Tech Firm</strong>
+* Ivy’s approach to personal branding is unmatched. She makes complex strategies simple and actionable, helping craft a consistent online identity. From profile optimization to content strategy, every post adds value and strengthens professional reputation.<br><strong style="color:#ff004c;">– Executive, Tech Firm</strong>
 <br><br>
-* Working with Ivy provided a clear roadmap for content growth, audience engagement, and network expansion. Her insights on content timing, optimization, and strategy are truly game-changing.<br><strong>– Founder, Jaguar solutions</strong></p>
+* Working with Ivy provided a clear roadmap for content growth, audience engagement, and network expansion. Her insights on content timing, optimization, and strategy are truly game-changing.<br><strong style="color:#ff004c;">– Founder, Jaguar solutions</strong></p>
 <p id="type-skill" style="font-size: 25px; font-family:'Dancing Script',cursive;font-weight: 400px; color:#ff004c;"></p>
 </section>
 
 <!-- Testimonials Section 3 -->
-<section class="testimonials-services reveal-left" id="testimonials">
+<section class="testimonials-services reveal-right" id="testimonials">
   <div class="container flex-container">
     <!-- Left Side: Services / Personal Branding Info -->
     <div class="services-left">
@@ -767,8 +769,9 @@ Each milestone strengthens my mission to empower professionals and organizations
       </div>
 
       <div class="faq">
+        <p style="color:#ff004c;"><strong><i class="fas fa-info-circle"></i> FAQ</strong></p><br>
         <p><strong><i class="fas fa-question-circle"></i></strong> How long does a personal branding project take?</p>
-        <p><strong><i class="fas fa-drafting-compass"></i></strong> Usually 2–4 weeks depending on complexity.</p>
+        <p><strong><i class="fas fa-drafting-compass"></i></strong> Usually 2–4 weeks depending on the complexity and scope of the project.</p>
       </div>
 
       <h3 class="packages-title"><i class="fas fa-tags" style="margin-right:10px;color:#ff004c;"></i> Pricing / Packages</h3>
@@ -823,6 +826,12 @@ Each milestone strengthens my mission to empower professionals and organizations
           <h4 class="testimonial-author"><i class="far fa-comments"></i> Rose</h4>
         </div>
 
+      <div class="faq">
+        <p style="color:#ff004c;"><strong><i class="fas fa-info-circle"></i> FAQ</strong></p><br>
+        <p><strong><i class="fas fa-question-circle"></i></strong> What is included in a personal branding package?</p>
+        <p><strong><i class="fas fa-drafting-compass"></i></strong> It includes brand strategy, visual identity, website design, and content positioning.</p>
+      </div>
+
       </div>
     </div>
 
@@ -830,7 +839,7 @@ Each milestone strengthens my mission to empower professionals and organizations
 </section>
 
 <!-- Testimonials Section Images -->
-<section class="posts reveal-right"> 
+<section class="posts reveal-left"> 
 <img src="https://tse4.mm.bing.net/th/id/OIP.kB9PUjlAEOqAwcr7BaDnLgHaQd?w=1080&h=2400&rs=1&pid=ImgDetMain&o=7&rm=3" class="cut5">
 <img src="https://images.hdqwalls.com/download/blonde-girl-in-depth-of-field-hd-rr-1080x1920.jpg" class="cut5">
 <img src="https://img.freepik.com/premium-photo/fashion-dress_1246590-1714.jpg" class="cut5">
@@ -838,7 +847,7 @@ Each milestone strengthens my mission to empower professionals and organizations
 </section>
 
 <!-- Billionaire Section -->
-<section class="alt reveal-left">
+<section class="alt reveal-right">
 <p><strong style="font-size: 1.5rem; color: #ff004c;">The Mindset That Drives Success: <i class="fas fa-fire"></i></strong><br><br>
 I believe in thinking big, bold, and strategically. My approach combines innovation, data-driven insights, and human storytelling to help CEOs, startups, and tech leaders reach their maximum potential.
 Whether it’s building influential personal brands, scaling tech products, or mentoring future leaders, my goal is to turn ambition into impact and ideas into execution.</p>
@@ -848,7 +857,7 @@ Whether it’s building influential personal brands, scaling tech products, or m
 </section>
 
 <!-- Testimonials Quotes -->
-<section class="quotes reveal-right">
+<section class="quotes reveal-left">
 <div class="cards">
 <div class="quote box"><i class="fas fa-pen-fancy"></i> Decide firmly, work relentlessly.</div>
 <div class="quote box"><i class="fas fa-pen-fancy"></i> The best gift you can give is a smile.</div>
@@ -857,14 +866,14 @@ Whether it’s building influential personal brands, scaling tech products, or m
 </section>
 
 <!-- Billionaire Section Images 1 -->
-<section class="section reveal-left">
+<section class="section reveal-right">
 <h1 id="billionaire">Billionaire <i class="fas fa-crown"></i></h1><br>
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3cfc1574187441.5c257f73dc292.jpg" class="cut9">
 <img src="https://s2.best-wallpaper.net/wallpaper/iphone/1801/Fashion-girl-street-glare_iphone_750x1334.jpg" class="cut9">
 </section>
 
 <!-- Billionaire Section Images 2 -->
-<section class="neo-grid-section reveal-right">
+<section class="neo-grid-section reveal-left">
   <div class="neo-grid-wrapper">
     <div class="neo-item neo-tall neo-left"><img src="https://images.pexels.com/photos/18185497/pexels-photo-18185497.jpeg?cs=srgb&dl=pexels-jos%C3%A9-cango-18185497.jpg&fm=jpg"></div>
     <div class="neo-item"><img src="https://wallpapers.com/images/hd/beautiful-girl-during-winter-gqctsy6q898vyea1.jpg"></div>
@@ -876,7 +885,7 @@ Whether it’s building influential personal brands, scaling tech products, or m
 </section>
 
 <!-- Contact Me Section Images 2 -->
-<section class="connect reveal-left">
+<section class="connect reveal-right">
   <h2>CONNECT WITH ME<stron id="contact"></stron></h2><span><i class="fas fa-paper-plane"></i></span>
   <span id="mymail"></span><br><br>
   <div class="icons">
@@ -888,7 +897,7 @@ Whether it’s building influential personal brands, scaling tech products, or m
   </div>
 </section>
 
-<section class="thanks reveal-right">  
+<section class="thanks reveal-left">  
   <div class="containerC">
     <!-- Speech Box -->
     <div class="note">
@@ -902,7 +911,7 @@ Whether it’s building influential personal brands, scaling tech products, or m
 </section>
 
 <!-- Center Border Image -->
-<section class="reveal-left">
+<section class="reveal-right">
 <img src="images/girl.png" class="zigzag">
 </section>
 

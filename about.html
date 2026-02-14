@@ -37,15 +37,12 @@ body[data-theme="light"] .card h3 {
 }
 
 /* THEME TOGGLE BUTTON */
-
-
-/* THEME TOGGLE BUTTON */
 .theme-toggle {
   cursor: pointer;
   font-size: 16px;
   padding: 10px 15px;
   position: fixed;
-  bottom: 40px;
+  bottom: 50px;
   right: 40px;
   z-index: 1001;
   border: none;
@@ -115,6 +112,38 @@ nav ul li a::after{content:'';position:absolute;left:0;bottom:-6px;width:0;heigh
 nav ul li a:hover::after{width:100%;}
 nav ul li a:hover {color:var(--purple-dark);}
 .hamburger {display:none;font-size:24px;color:#fff;cursor:pointer;}
+
+/* Hamburger & mobile nav adjustments */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Styles */
+@media(max-width: 900px){
+  nav ul.nav-links {
+    display: none;          /* hide by default on mobile */
+    flex-direction: column;
+    background: rgba(179,136,255,0.95);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(14px);
+    z-index: 999;
+  }
+
+  nav ul.nav-links.show {
+    display: flex;           /* show when hamburger clicked */
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
 
 /* HERO */
 #hero{
@@ -246,10 +275,9 @@ section h2::after{
 .typing-text{
   font-family:'Fira Code', monospace;
   font-size:24px;
-  font-weight:500;
+  font-weight:bold;
   color:var(--purple);
   background-color:#111;
-  font-weight:bold;
   padding:5px 10px;
   display:inline-block;
   border-right:2px solid #fff;
@@ -257,9 +285,10 @@ section h2::after{
   overflow:hidden;
   animation: blink 0.8s infinite;
 }
+
 @keyframes blink{
-  0%,50%,100%{ border-color:#fff; }
-  25%,75%{ border-color:transparent; }
+  0%,100%{ border-color:#fff; }
+  50%{ border-color:transparent; }
 }
 
 /* Slide Animation */
@@ -464,7 +493,6 @@ section h2::after{
     <li>Designed to elevate overall user experience with modern UI precision</li>
   </ul>
 </div>
-
 
 <!-- Card 10 -->
 <div class="card">
@@ -691,62 +719,22 @@ section h2::after{
   </ul>
 </div>
 
-<!-- Card 24 -->
-<div class="card">
-<h3>Footer Design</h3>
-<ul>
-<li>Quick links for easy website navigation</li>
-<li>Privacy Policy for professional trust and transparency</li>
-<li>Terms & Conditions for compliance and credibility</li>
-<li>Hover underline effects for modern design appeal</li>
-<li>Elegant industry-level finishing for aesthetics</li>
-<li>Completes professional branding of the portfolio</li>
-</ul>
-</div>
-
 <!-- Card 25 -->
 <div class="card">
   <h3>README Highlights</h3>
   <ul>
-    <li>Well-structured project architecture including index.html, about.html, images folder, and README.md documentation</li>
-    <li>Comprehensive breakdown of advanced CSS techniques such as glassmorphism, gradients, clip-path, and responsive grids</li>
-    <li>Detailed overview of JavaScript functionality including typing effects, theme control, and scroll-based interactions</li>
-    <li>Clearly defined content hierarchy from Hero to Contact ensuring logical project flow</li>
-    <li>Organized asset management for images and UI components</li>
-    <li>GitHub-ready documentation showcasing technical depth and clarity</li>
-    <li>Professional presentation suitable for LinkedIn and client demonstrations</li>
-    <li>Structured explanation of UI logic, interaction design, and scalability planning</li>
+    <li>Well-structured project architecture including <strong>index.html</strong>, <strong>about.html</strong>, <strong>terms.html</strong>, <strong>privacy.html</strong>, and <strong>README.md</strong></li>
+    <li>Organized <strong>images/</strong> folder for clean asset management</li>
+    <li>Advanced CSS implementation: glassmorphism, gradients, clip-path, and responsive layouts</li>
+    <li>JavaScript features including typing effects, theme control, and scroll interactions</li>
+    <li>Clear content hierarchy from Hero to Contact ensuring logical flow</li>
+    <li>GitHub-ready documentation with professional presentation standards</li>
+    <li>SEO-friendly semantic HTML structure for better visibility</li>
+    <li>Scalable and maintainable codebase designed for future enhancements</li>
   </ul>
 </div>
 
 <!-- Card 26 -->
-<div class="card">
-<h3>Connect With Me</h3>
-<ul>
-<li>Let’s build professional digital identities together</li>
-<li>Designed for learners, professionals & future leaders</li>
-<li>Collaboration opportunities for portfolio enhancement</li>
-<li>Professional networking and skill visibility</li>
-<li>Encourages sharing knowledge and projects</li>
-<li>Builds a strong online presence for long-term growth</li>
-</ul>
-</div>
-
-<!-- Card 27 -->
-<div class="card">
-<h3>Thank You</h3>
-<ul>
-<li>Thank you for your time & attention</li>
-<li>Designed to help professionals stand out effectively</li>
-<li>Build credibility and represent skills confidently</li>
-<li>LinkedIn and beyond professional showcase</li>
-<li>Modern, elegant, industry-ready portfolio design</li>
-<li>Encourages further interaction & networking</li>
-<li>Leaves a lasting positive impression</li>
-</ul>
-</div>
-
-<!-- Card 28 -->
 <div class="card">
   <h3>Client-Friendly Single File Architecture</h3>
   <ul>
@@ -759,7 +747,7 @@ section h2::after{
   </ul>
 </div>
 
-<!-- Card 29 -->
+<!-- Card 27 -->
 <div class="card">
   <h3>Interactive Features of the Website</h3>
   <ul>
@@ -774,6 +762,46 @@ section h2::after{
   </ul>
 </div>
 
+<!-- Card 28 -->
+<div class="card">
+<h3>Connect With Me</h3>
+<ul>
+<li>Let’s build professional digital identities together</li>
+<li>Designed for learners, professionals & future leaders</li>
+<li>Collaboration opportunities for portfolio enhancement</li>
+<li>Professional networking and skill visibility</li>
+<li>Encourages sharing knowledge and projects</li>
+<li>Builds a strong online presence for long-term growth</li>
+</ul>
+</div>
+
+<!-- Card 29 -->
+<div class="card">
+<h3>Footer Design</h3>
+<ul>
+<li>Quick links for easy website navigation</li>
+<li>Privacy Policy for professional trust and transparency</li>
+<li>Terms & Conditions for compliance and credibility</li>
+<li>Hover underline effects for modern design appeal</li>
+<li>Elegant industry-level finishing for aesthetics</li>
+<li>Completes professional branding of the portfolio</li>
+</ul>
+</div>
+
+<!-- Card 30 -->
+<div class="card">
+<h3>Thank You</h3>
+<ul>
+<li>Thank you for your time & attention</li>
+<li>Designed to help professionals stand out effectively</li>
+<li>Build credibility and represent skills confidently</li>
+<li>LinkedIn and beyond professional showcase</li>
+<li>Modern, elegant, industry-ready portfolio design</li>
+<li>Encourages further interaction & networking</li>
+<li>Leaves a lasting positive impression</li>
+</ul>
+</div>
+
 </div>
 </section>
 
@@ -786,11 +814,9 @@ section h2::after{
 <p><a href="https://github.com/rajeevtiwari8055" target="_blank" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='#ff004c'" onmouseout="this.style.color='inherit'"><i class="fab fa-github"></i> GitHub↗</a></p>
 </section>
 
-
-
 <!-- FOOTER -->
 <footer class="site-footer">
-  <p>© <span id="year"></span> <span style="color: #ff004c;">Rajeev Dataverse!</span> Digital Portfolio Solutions | All rights reserved</p>
+  <p>© <span id="year"></span> <span style="color: #ff004c;">Rajeev Dataverse!</span><br>Digital Portfolio Solutions | All rights reserved</p>
 </footer>
 
 <script>
@@ -799,35 +825,35 @@ section h2::after{
 </script>
 
 <script>
-// Typing Properties
 const text = "Interactive, Elegant & Professional";
-let idx = 0;
-let forward = true; // typing forward or backward
+let index = 0;
+let isDeleting = false;
 
-function typingLoop(){
-  const el = document.querySelector('.typing-text');
+function typeEffect() {
+  const element = document.querySelector(".typing-text");
 
-  if(forward){
-    el.innerHTML = text.substring(0, idx);
-    idx++;
-    if(idx > text.length){
-      forward = false;
-      setTimeout(typingLoop, 1000); // pause at end
+  if (!isDeleting) {
+    element.textContent = text.substring(0, index++);
+    
+    if (index > text.length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1200); // pause at full text
       return;
     }
   } else {
-    el.innerHTML = text.substring(0, idx);
-    idx--;
-    if(idx < 0){
-      forward = true;
-      setTimeout(typingLoop, 500); // pause at start
+    element.textContent = text.substring(0, index--);
+
+    if (index < 0) {
+      isDeleting = false;
+      setTimeout(typeEffect, 500); // pause before retyping
       return;
     }
   }
-  setTimeout(typingLoop, 100);
+
+  setTimeout(typeEffect, isDeleting ? 60 : 100);
 }
 
-window.onload = typingLoop;
+window.addEventListener("load", typeEffect);
 </script>
 
 <script>
