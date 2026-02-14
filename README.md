@@ -14,7 +14,7 @@ A **premium, modern, interactive portfolio website** designed for professionals,
 - <a href="#glassmorphism-navigation-experience">🧊 Glassmorphism Navigation Experience</a>
 - <a href="#about-me-professional-not-boring">👤 About Me – Professional, Not Boring</a>
 - <a href="#skills-work-section-visual-strength-display">🛠️ Skills & Work Section – Visual Strength Display</a>
-- <a href="#advanced-card-hover-interactions">🎴 Advanced Card & Hover Interactions</a>
+- <a href="#advanced-card-hover-interactions">🎴 Advanced Card - Hover Interactions & Footer</a>
 - <a href="#button-interaction-design">🔘 Button & Interaction Design</a>
 - <a href="#css-features–interactive-modern-futuristic">🎨 CSS Features – Interactive, Modern & Futuristic</a>
 - <a href="#ui-ux-design">🎨 UI / UX Approach</a>
@@ -23,8 +23,8 @@ A **premium, modern, interactive portfolio website** designed for professionals,
 - <a href="#smart-contact-section">📞 Smart Contact Section</a>
 - <a href="#business-problems-solved">📌 Business Problems Solved</a>
 - <a href="#future-enhancements">🔮 Roadmap & Future Expansion</a>
-- <a href="#final-impression">🌙 Final Impression</a>
 - <a href="#read-me">📦 README Highlights</a>
+- <a href="#final-impression">🌙 Final Impression</a>
 - <a href="#connect-with-me">📬 Connect with Me</a>
 - <a href="#project-visuals">🖼️ Project Visuals</a>
 
@@ -32,9 +32,9 @@ A **premium, modern, interactive portfolio website** designed for professionals,
 
 ## <span id="project-overview">🚀 Project Overview</span>  
 
-This project is a **modern, interactive, and visually-rich personal branding and business portfolio website**. It is designed for professionals, digital marketers, LinkedIn coaches, freelancers, and businesses seeking to enhance their **visibility, credibility, and online presence**.
+This project is a **modern, interactive, and visually-rich personal branding and business portfolio website**. *It is designed for professionals, digital marketers, LinkedIn coaches, freelancers, and businesses seeking to enhance their* **visibility, credibility, and online presence**.
 
-`The portfolio leverages the latest **HTML5, CSS3, JavaScript, SVG graphics, animations, and responsive design techniques** to create a **dynamic storytelling experience** that keeps visitors engaged.`
+The portfolio leverages the latest **HTML5, CSS3, JavaScript, SVG graphics, animations, and responsive design techniques** to create a *dynamic storytelling experience* that keeps visitors engaged.
 
 | Property     | Details |
 |-------------|----------|
@@ -67,7 +67,7 @@ This project is a **modern, interactive, and visually-rich personal branding and
 
 ## <span id="vision-purpose">🎯 Vision & Purpose</span>
 
-`This portfolio is strategically crafted to **highlight skills, accomplishments, and professional services through an engaging and interactive digital experience.**`
+`This portfolio is strategically crafted to` **highlight skills, accomplishments, and professional services through an engaging and interactive digital experience.*
 
 - 🚀 Amplify personal branding and strengthen LinkedIn visibility.  
 - 🏅 Showcase achievements to reinforce professional credibility.  
@@ -79,7 +79,7 @@ This project is a **modern, interactive, and visually-rich personal branding and
 - 📩 Encourage smooth and direct communication opportunities.  
 - 🧠 Establish long-term personal brand authority and thought leadership.  
 
-`This portfolio is **not a static presentation — it is a premium, dynamic, and strategically structured digital presence designed to leave a lasting impression.**`
+This portfolio is *not a static presentation — it is a premium, dynamic, and strategically structured digital presence designed to leave a lasting impression.*
 
 ![image](images/neon40.png)
 
@@ -87,20 +87,20 @@ This project is a **modern, interactive, and visually-rich personal branding and
  
 ## <span id="#target-audience">👥 Target Audience</span>
 
-`This portfolio is tailored for professionals and growth-driven individuals who value visibility, credibility, and strategic positioning.`
+*This portfolio is tailored for professionals and growth-driven individuals who value visibility, credibility, and strategic positioning.*
 
 ### 🎯 Ideal Audience Segments
 
-- 🔹 LinkedIn professionals aiming to strengthen their personal brand presence.  
-- 🔹 Industry thought leaders building authority and influence online.  
-- 🔹 Branding and marketing strategists showcasing expertise and results.  
-- 🔹 Startup founders establishing a strong and credible digital identity.  
-- 🔹 Digital creators expanding their professional portfolio reach.  
-- 🔹 Coaches and mentors highlighting their impact and success stories.  
-- 🔹 Consultants and freelancers presenting structured service offerings.  
-- 🔹 Business owners seeking a polished and trustworthy online presence.  
+- LinkedIn professionals aiming to strengthen their personal brand presence.  
+- Industry thought leaders building authority and influence online.  
+- Branding and marketing strategists showcasing expertise and results.  
+- Startup founders establishing a strong and credible digital identity.  
+- Digital creators expanding their professional portfolio reach.  
+- Coaches and mentors highlighting their impact and success stories.  
+- Consultants and freelancers presenting structured service offerings.  
+- Business owners seeking a polished and trustworthy online presence.  
 
-`This portfolio speaks to individuals who understand that **visibility + credibility = opportunity.**`
+*This portfolio speaks to individuals who understand that* **visibility + credibility = opportunity.**
 
 ![image](images/neon45.png)
 
@@ -108,15 +108,15 @@ This project is a **modern, interactive, and visually-rich personal branding and
 
 ## <span id="website-structure-storytelling-flow">🧩 Website Architecture & Storytelling Flow</span>
 
-## 📖 Strategic Storytelling Framework
+### 📖 Strategic Storytelling Framework
 
 The website is thoughtfully structured to guide visitors through a seamless journey:
 
-**Identity → Expertise → Proof of Work → Credibility → Connection**
+`Identity → Expertise → Proof of Work → Credibility → Connection`
 
-`Each section builds upon the previous one, creating a smooth and engaging narrative experience.`
+*Each section builds upon the previous one, creating a smooth and engaging narrative experience.*
 
-## 📋 Complete Section Breakdown
+***📋 Complete Section Breakdown***
 
 | Section | Core Elements | Strategic Purpose |
 |----------|--------------|------------------|
@@ -133,8 +133,7 @@ The website is thoughtfully structured to guide visitors through a seamless jour
 | Contact Section | Email CTA, LinkedIn link, call option, interactive buttons | Direct engagement pathway |
 | Footer | Organized links, quick navigation, minimal design | Professional closure |
 
-This structure ensures the website is not just informative —  
-it delivers a **premium, interactive, and strategically layered digital experience.**
+*This structure ensures the website is not just informative* —  it delivers a **premium, interactive, and strategically layered digital experience.**
 
 ![image](images/neon53.png)
 
@@ -192,17 +191,19 @@ it delivers a **premium, interactive, and strategically layered digital experien
 
 ---
 
-## <span id="advanced-card-hover-interactions">🎴 Advanced Card & Hover Interactions</span>  
+## <span id="advanced-card-hover-interactions">🎴 Advanced Card - Hover Interactions & Footer</span>  
 
 
 - Cards and boxes with scale transform and colored shadows.  
 - Smooth hover animations to engage users visually.  
 - Cards highlight services, testimonials, and project previews.
+- Elegant, Seamlessly Integrated Clickable Links in a Modern Professional Footer.
 
 ![image](images/card.png)
 ![image](images/card1.png)
 ![image](images/card2.png)
 ![image](images/card3.png)
+![image](images/footer.png)
 
 ---
 
@@ -220,7 +221,7 @@ it delivers a **premium, interactive, and strategically layered digital experien
 
 ## 📖 Guided Visitor Journey
 
-The website follows a structured and intentional storytelling path designed to build connection and credibility step by step:
+*The website follows a structured and intentional storytelling path designed to build connection and credibility step by step:*
 
 `Introduction 
 ↓ 
@@ -236,12 +237,11 @@ Vision & Mindset
 ↓ 
 Contact & Engagement`
 
-This natural progression moves visitors smoothly from  
-**Awareness → Interest → Trust → Engagement → Action**
+This natural progression moves visitors smoothly from  **Awareness → Interest → Trust → Engagement → Action**
 
-Each section strategically strengthens the brand narrative while guiding users toward meaningful interaction.
+`Each section strategically strengthens the brand narrative while guiding users toward meaningful interaction.`
 
-![image](images/about.png)
+![image](images/animation.png)
 
 ---
 
@@ -261,7 +261,7 @@ To support this storytelling flow, the navigation system is designed for clarity
 
 Deliver frictionless navigation while maintaining a sleek, interactive, and professionally structured browsing experience.
 
-![image](images/about1.png)
+![image](images/about.png)
 
 ---
 
@@ -292,9 +292,11 @@ Rather than relying on heavy frameworks, the design leverages pure CSS technique
 | **Image Interaction Effects** | Smooth scaling, subtle rotation, depth shadows | Adds dimension and premium visual engagement | Hero Image, Project Previews |
 | **Smooth Scrolling & Motion Timing** | `scroll-behavior: smooth` + cubic-bezier transitions | Creates fluid navigation and refined motion experience | Whole Interface |
 
+![image](images/about1.png)
+
 ---
 
-## 💡 Design & Development Philosophy***
+## 💡 Design & Development Philosophy
 
 This portfolio is built on a foundation where **design, interaction, and performance work together seamlessly**.  
 Every styling and scripting decision is intentional — focused on clarity, engagement, and long-term scalability.
@@ -305,6 +307,8 @@ Every styling and scripting decision is intentional — focused on clarity, enga
 - **Meaningful Motion** – Transitions and reveals enhance storytelling and guide attention.  
 - **Visual Precision** – Balanced spacing, structured grids, and controlled color systems ensure harmony.  
 - **User-First Experience** – Accessibility, responsiveness, and intuitive interaction remain top priority.  
+
+![image](images/memories.png)
 
 ---
 
@@ -317,6 +321,8 @@ The interface is designed to feel effortless and refined:
 - 🚫 No clutter or unnecessary visual overload.  
 - 🌊 Fluid scrolling and smooth interaction flow.  
 - 📱 Fully responsive behavior across devices.  
+
+![image](images/billionaire.png)
 
 ---
 
@@ -331,6 +337,8 @@ The integration of **CSS and JavaScript features** creates a cohesive, immersive
 - 🔄 Real-time elements (typing effects, scroll indicators, dynamic date/year updates) making the interface feel alive and evolving.
 
 Every design and development choice reinforces **clarity, elegance, professionalism, and modern digital identity.**
+
+![image](images/works.png)
 
 ---
 
@@ -362,6 +370,8 @@ The integration of these technologies ensures:
 
 Together, these tools and features transform the portfolio into a **modern, scalable, and technically refined digital platform.**
 
+![image](images/works.png)
+
 ---
 
 ## <span id="tools-technologies-used">🧰 Tools & Technologies Used</span> 
@@ -378,6 +388,8 @@ This portfolio is developed using modern web technologies focused on performance
 | **Git & GitHub** | Version control, project management, and deployment hosting. |
 | **ChatGPT** | Assisted with structured content strategy, UI logic planning, and documentation refinement. |
 
+![image](images/neon.png)
+
 ---
 
 ## <span id="smart-contact-section">📞 Smart Contact Section</span>  
@@ -390,6 +402,8 @@ The contact section is designed for **maximum convenience**:
 - ⬇️ Rare falling hover animations.
 
 > Users can connect instantly **without friction**.
+
+![image](images/thanks2.png)
 
 ---
 
@@ -405,6 +419,8 @@ This portfolio is strategically designed to solve real digital positioning and b
 - 📢 Converts passive visitors into active inquiries and connections.  
 - 🎯 Aligns personal branding with business growth objectives.  
 - 📊 Strengthens differentiation in crowded consulting and freelance markets.  
+
+![image](images/testimonial.png)
 
 ---
 
@@ -423,11 +439,15 @@ The portfolio is built with scalability in mind. Planned upgrades include:
 - 🌍 Multi-language accessibility for global reach.  
 - 🔗 Smart LinkedIn/API integrations for live content updates.  
 
+![image](images/neon26.png)
+
 ---
 
 ## <span id="read-me">📦 README Highlights</span> 
 
 Your support helps in building and sharing more impactful projects.
+
+![image](images/readme.png)
 
 ## <span id="final-impression">🌙 Final Impression</span> 
 
@@ -438,6 +458,8 @@ A strategically engineered, premium personal branding portfolio that blends:
 - ⭐ Social proof integration  
 - 📈 Conversion-focused engagement strategy  
 - ⚡ Smooth, modern, high-performance UI/UX  
+
+![image](images/neon26.png)
 
 This portfolio is not just a website —  
 it is a **powerful digital brand ecosystem designed to create impact, credibility, and lasting professional impression.**
@@ -453,7 +475,9 @@ it is a **powerful digital brand ecosystem designed to create impact, credibilit
 - 🤝 Connect for collaboration opportunities  
 - 💡 Share feedback or improvement ideas  
 - 🔁 Recommend it to others who may benefit
-- 
+
+![image](images/contact.png)
+
 ---
 
 ## <span id="connect-with-me">📬 Connect with Me</span> 
@@ -480,6 +504,8 @@ I’m always open to meaningful conversations around
 <!-- Typing Animation / 🤝 Thanks for Visiting! -->
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=8A2BE2&lines=🤝Thank+you+for+visiting+my+profile!)](https://git.io/typing-svg)
 
+![image](images/neon25.png)
+
 <!-- ⭐💫 Shower stars if you like my repos -->
 <div align="center">
 <img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30">
@@ -491,35 +517,16 @@ I’m always open to meaningful conversations around
 `© 2026 Rajeev Tiwari
 Personal Branding | Interactive Portfolio | Digital Strategy`
 
+![image](images/billionaire1.png)
+
 ---
 
 ## <span id="project-visual">🖼️ Project Visuals</span>  
 
-### 🌟 Hero Section  
-![Hero Section](./assets/hero-section.png)
+🧊 `Project Preview`  
+![image](images/neon44.png)
 
-### 🧊 Navigation Bar  
-![Navigation Bar](./assets/navbar.png)
-
-### 👤 About Section  
-![About Section](./assets/about-section.png)
-
-### 🧩 Skills Section  
-![Skills Section](./assets/skills-section.png)
-
-### 💼 Projects / Services Section  
-![Projects Section](./assets/projects-section.png)
-
-### 🏆 Achievements Section  
-![Achievements Section](./assets/achievements-section.png)
-
-### 💬 Testimonials Section  
-![Testimonials Section](./assets/testimonials-section.png)
-
-### 📜 Scroll Animations  
-![Scroll Animations](./assets/scroll-animations.png)
-
-### 🌗 Dark / Light Mode  
-![Theme Toggle](./assets/theme-toggle.png)
+🌗 `Project Overview`   
+![image](images/girl.png)
 
 ---
