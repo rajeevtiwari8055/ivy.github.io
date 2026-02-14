@@ -512,7 +512,7 @@ I’m always open to meaningful conversations around
 
 ---
 
-## <span id="project-visual">🖼️ Project Visuals</span>  
+## <span id="project-visuals">🖼️ Project Visuals</span>  
 
 🧊 `Project Preview`  
 ![image](images/neon53.png)
