@@ -497,9 +497,6 @@ I’m always open to meaningful conversations around
 <a href="https://rajeevtiwari8055.github.io/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/841/841364.png" alt="Website" width="35" height="35"></a>
 </div>
 
-`© 2026 Rajeev Tiwari
-Personal Branding | Interactive Portfolio | Digital Strategy`
-
 <!-- Typing Animation / 🤝 Thanks for Visiting! -->
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=8A2BE2&lines=🤝Thank+you+for+visiting+my+profile!)](https://git.io/typing-svg)
 
