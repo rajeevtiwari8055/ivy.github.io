@@ -385,7 +385,7 @@ border-radius:30px;background:rgba(255,255,255,0.08);backdrop-filter:blur(18px);
 /* Remove extra space below navbar */
 body {margin: 0;padding: 0;}
 /* ---------------- Mobile Navbar ---------------- */
-@media(max-width:900px){nav {padding: 10px 20px; /* width: 90%;  */ border-radius: 30px;}
+@media(max-width:900px){nav {padding: 8px 20px; /* width: 90%;  */ border-radius: 30px;}
 .menu-icon {display: block;}
 .nav-links {position: absolute;top: 60px;right: 10px;width: 220px; background: rgba(0,0,0,0.75);backdrop-filter: blur(10px);border-radius: 12px;
 display: none;flex-direction: column;gap: 15px;padding: 15px;text-align: left;animation: fadeIn .3s ease;opacity: 0;transition: opacity .3s ease, transform .3s ease;}
@@ -429,7 +429,7 @@ body.light-mode .nav-links ul li a:hover {background: rgba(0, 0, 0, 0.05); color
 /* Extra small mobile devices */
 .heroH h1 { font-size: 60px; }.heroH p { font-size: 18px; }.typing { font-size: 18px; }
 /* ---------- TOGGLE BUTTON VISIBLE ---------- */
-.theme-toggle{right: 14px;bottom: 50px;padding: 10px 14px;}}
+.theme-toggle{right: 14px;bottom: 30px;padding: 10px 14px;}}
 
 /* ===== CENTER FUTURISTIC CORE ===== */
 .quantum-core-fixed{position: fixed;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 180px;height: 180px;display: flex;align-items: center;justify-content: center;text-align: center;z-index: 998;pointer-events: none;}
@@ -485,11 +485,17 @@ body.light-mode .energy-text-section{background:#fff;}
 .energy-text:nth-child(5){ top:140px; left:60%; }
 .energy-text:nth-child(6){ top:220px; left:30%; }
 .text-line path{stroke-width:3;}} body{overflow-x:hidden;} */
-@media (max-width:900px){
+/* @media (max-width:900px){ */
 /* Hide the entire energy text section on mobile */
-.energy-text-section {display: none;}
+/* .energy-text-section {display: none;} */
 /* Agar sirf specific text lines hide karna ho */
-.energy-text, .text-line {display: none;}}
+/* .energy-text, .text-line {display: none;}} */
+
+/* ============================= */
+/* 📱 MOBILE VIEW (≤900px) */
+/* ============================= */
+@media (max-width: 900px) {.energy-text-section,.energy-heading,.text-wrapper,.energy-text,.text-line {display: none !important;}
+body {overflow-x: hidden;}}
 
 </style>
 </head>
