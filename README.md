@@ -178,7 +178,7 @@ This section delivers a **powerful, energetic, and memorable first impression** 
 - Responsive design with flex-wrap for smaller screens.  
 - Rounded corners for images and cards.
 
-![image](images/about.png)
+![image](images/about1.png)
 
 ---
 
@@ -259,7 +259,7 @@ To support this storytelling flow, the navigation system is designed for clarity
 
 Deliver frictionless navigation while maintaining a sleek, interactive, and professionally structured browsing experience.
 
-![image](images/design.png)
+![image](images/about.png)
 
 ---
 
@@ -269,8 +269,6 @@ The CSS architecture of this portfolio is carefully engineered to deliver a **pr
 It combines modern UI trends, motion design principles, and responsive layout systems to ensure the website feels alive, engaging, and strategically structured.
 
 Rather than relying on heavy frameworks, the design leverages pure CSS techniques to create depth, movement, and clarity — balancing **visual sophistication with usability**.
-
----
 
 ## ✨ Core Design Systems & Interactive Enhancements
 
@@ -290,7 +288,7 @@ Rather than relying on heavy frameworks, the design leverages pure CSS technique
 | **Image Interaction Effects** | Smooth scaling, subtle rotation, depth shadows | Adds dimension and premium visual engagement | Hero Image, Project Previews |
 | **Smooth Scrolling & Motion Timing** | `scroll-behavior: smooth` + cubic-bezier transitions | Creates fluid navigation and refined motion experience | Whole Interface |
 
-![image](images/about1.png)
+![image](images/design.png)
 
 ---
 
