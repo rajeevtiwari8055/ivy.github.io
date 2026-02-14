@@ -141,7 +141,7 @@ The website is thoughtfully structured to guide visitors through a seamless jour
 
 ## <span id="hero-section-first-impression-matters">✨ Hero Section – First Impression Matters</span>  
 
-`The **Hero Section** is crafted to immediately capture attention and communicate clarity, confidence, and authority.`
+The **Hero Section** is crafted to immediately capture attention and communicate clarity, confidence, and authority.
 
 ### 🚀 Key Highlights
 
@@ -152,7 +152,7 @@ The website is thoughtfully structured to guide visitors through a seamless jour
 - 📜 Scroll-triggered animations that enhance storytelling flow.  
 - 📉 Subtle hero resize/shrink effect on scroll for a premium interactive feel.  
 
-`This section delivers a **powerful, energetic, and memorable first impression** that instantly positions the brand with authority.`
+This section delivers a **powerful, energetic, and memorable first impression** that instantly positions the brand with authority.
 
 ![image](images/home.png)
 
@@ -219,7 +219,7 @@ The website is thoughtfully structured to guide visitors through a seamless jour
 
 # 🔁 Strategic Storytelling Flow & Navigation Experience
 
-## 📖 Guided Visitor Journey
+### 📖 Guided Visitor Journey
 
 *The website follows a structured and intentional storytelling path designed to build connection and credibility step by step:*
 
@@ -240,10 +240,6 @@ Contact & Engagement`
 This natural progression moves visitors smoothly from  **Awareness → Interest → Trust → Engagement → Action**
 
 `Each section strategically strengthens the brand narrative while guiding users toward meaningful interaction.`
-
-![image](images/animation.png)
-
----
 
 ### 🧭 Navigation System – Seamless & Modern
 
@@ -370,7 +366,7 @@ The integration of these technologies ensures:
 
 Together, these tools and features transform the portfolio into a **modern, scalable, and technically refined digital platform.**
 
-![image](images/works.png)
+![image](images/animation.png)
 
 ---
 
@@ -459,7 +455,7 @@ A strategically engineered, premium personal branding portfolio that blends:
 - 📈 Conversion-focused engagement strategy  
 - ⚡ Smooth, modern, high-performance UI/UX  
 
-![image](images/neon26.png)
+![image](images/billionaire1.png)
 
 This portfolio is not just a website —  
 it is a **powerful digital brand ecosystem designed to create impact, credibility, and lasting professional impression.**
@@ -501,10 +497,11 @@ I’m always open to meaningful conversations around
 <a href="https://rajeevtiwari8055.github.io/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/841/841364.png" alt="Website" width="35" height="35"></a>
 </div>
 
+`© 2026 Rajeev Tiwari
+Personal Branding | Interactive Portfolio | Digital Strategy`
+
 <!-- Typing Animation / 🤝 Thanks for Visiting! -->
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=8A2BE2&lines=🤝Thank+you+for+visiting+my+profile!)](https://git.io/typing-svg)
-
-![image](images/neon25.png)
 
 <!-- ⭐💫 Shower stars if you like my repos -->
 <div align="center">
@@ -514,10 +511,7 @@ I’m always open to meaningful conversations around
 </a>
 </div>
 
-`© 2026 Rajeev Tiwari
-Personal Branding | Interactive Portfolio | Digital Strategy`
-
-![image](images/billionaire1.png)
+![image](images/neon25.png)
 
 ---
 
