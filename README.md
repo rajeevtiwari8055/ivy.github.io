@@ -135,7 +135,7 @@ The website is thoughtfully structured to guide visitors through a seamless jour
 
 *This structure ensures the website is not just informative* —  it delivers a **premium, interactive, and strategically layered digital experience.**
 
-![image](images/neon53.png)
+![image](images/neon44.png)
 
 ---
 
@@ -518,7 +518,7 @@ Personal Branding | Interactive Portfolio | Digital Strategy`
 ## <span id="project-visual">🖼️ Project Visuals</span>  
 
 🧊 `Project Preview`  
-![image](images/neon44.png)
+![image](images/neon53.png)
 
 🌗 `Project Overview`   
 ![image](images/girl.png)
