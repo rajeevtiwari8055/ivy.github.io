@@ -60,7 +60,9 @@ This project is a **modern, interactive, and visually-rich personal branding and
 - ⚡ Scroll-Triggered Animations  
 - 🧠 Dynamic JavaScript Features  
 - 📱 Fully Responsive Grid Layout
-  
+
+![image](images/neon50.png)
+
 ---
 
 ## <span id="vision-purpose">🎯 Vision & Purpose</span>
@@ -78,6 +80,8 @@ This project is a **modern, interactive, and visually-rich personal branding and
 - 🧠 Establish long-term personal brand authority and thought leadership.  
 
 `This portfolio is **not a static presentation — it is a premium, dynamic, and strategically structured digital presence designed to leave a lasting impression.**`
+
+![image](images/neon40.png)
 
 ---
  
@@ -97,6 +101,8 @@ This project is a **modern, interactive, and visually-rich personal branding and
 - 🔹 Business owners seeking a polished and trustworthy online presence.  
 
 `This portfolio speaks to individuals who understand that **visibility + credibility = opportunity.**`
+
+![image](images/neon45.png)
 
 ---
 
@@ -130,6 +136,8 @@ The website is thoughtfully structured to guide visitors through a seamless jour
 This structure ensures the website is not just informative —  
 it delivers a **premium, interactive, and strategically layered digital experience.**
 
+![image](images/neon53.png)
+
 ---
 
 ## <span id="hero-section-first-impression-matters">✨ Hero Section – First Impression Matters</span>  
@@ -147,6 +155,8 @@ it delivers a **premium, interactive, and strategically layered digital experien
 
 `This section delivers a **powerful, energetic, and memorable first impression** that instantly positions the brand with authority.`
 
+![image](images/home.png)
+
 ---
 
 ## <span id="glassmorphism-navigation-experience">🧊 Glassmorphism Navigation Experience</span>  
@@ -158,16 +168,16 @@ it delivers a **premium, interactive, and strategically layered digital experien
 - Rounded corners, soft shadows, and smooth hover effects.  
 - Mobile-friendly hamburger menu with fade-in animation.
 
+![image](images/community.png)
+
 **Purpose:** Modern, interactive navigation that elevates the overall UX.
-
----
-
-## <span id="glassmorphism-navigation-experience">🧊 Glassmorphism Navigation Experience</span>  
 
 - Two-column layout: Image + description.  
 - Elegant typography with Playfair Display and italics.  
 - Responsive design with flex-wrap for smaller screens.  
 - Rounded corners for images and cards.
+
+![image](images/design.png)
 
 ---
 
@@ -177,6 +187,8 @@ it delivers a **premium, interactive, and strategically layered digital experien
 - Large fonts with hover rotations and translations.  
 - Mobile-responsive with media queries.  
 - Integrates with dark/light mode toggle.
+  
+![image](images/work.png)
 
 ---
 
@@ -185,7 +197,12 @@ it delivers a **premium, interactive, and strategically layered digital experien
 
 - Cards and boxes with scale transform and colored shadows.  
 - Smooth hover animations to engage users visually.  
-- Cards highlight services, testimonials, and project previews.  
+- Cards highlight services, testimonials, and project previews.
+
+![image](images/card.png)
+![image](images/card1.png)
+![image](images/card2.png)
+![image](images/card3.png)
 
 ---
 
@@ -194,6 +211,8 @@ it delivers a **premium, interactive, and strategically layered digital experien
 - Buttons with hover color transitions, scaling, and shadow effects.  
 - Dark/Light mode compatible.  
 - Mobile-friendly sizing for better accessibility.
+
+![image](images/image.png)
 
 ---
 
@@ -222,6 +241,8 @@ This natural progression moves visitors smoothly from
 
 Each section strategically strengthens the brand narrative while guiding users toward meaningful interaction.
 
+![image](images/about.png)
+
 ---
 
 ### 🧭 Navigation System – Seamless & Modern
@@ -239,6 +260,8 @@ To support this storytelling flow, the navigation system is designed for clarity
 **Purpose:**  
 
 Deliver frictionless navigation while maintaining a sleek, interactive, and professionally structured browsing experience.
+
+![image](images/about1.png)
 
 ---
 
