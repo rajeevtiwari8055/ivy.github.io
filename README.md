@@ -12,7 +12,7 @@ A **premium, modern, interactive portfolio website** designed for professionals,
 - <a href="#website-structure-storytelling-flow">🧩 Website Structure & Storytelling Flow</a>
 - <a href="#hero-section-first-impression-matters">✨ Hero Section – First Impression Matters</a>
 - <a href="#glassmorphism-navigation-experience">🧊 Glassmorphism Navigation Experience</a>
-- <a href="#about-me-professional-not-boring">👤 About Me – Professional, Not Boring</a>
+- <a href="#about-me">👤 About Me – Professional, Not Boring</a>
 - <a href="#skills-work-section-visual-strength-display">🛠️ Skills & Work Section – Visual Strength Display</a>
 - <a href="#advanced-card-hover-interactions">🎴 Advanced Card - Hover Interactions & Footer</a>
 - <a href="#button-interaction-design">🔘 Button & Interaction Design</a>
@@ -85,7 +85,7 @@ This portfolio is *not a static presentation — it is a premium, dynamic, and s
 
 ---
  
-## <span id="#target-audience">👥 Target Audience</span>
+## <span id="target-audience">👥 Target Audience</span>
 
 *This portfolio is tailored for professionals and growth-driven individuals who value visibility, credibility, and strategic positioning.*
 
@@ -169,14 +169,16 @@ This section delivers a **powerful, energetic, and memorable first impression** 
 
 ![image](images/community.png)
 
-**Purpose:** Modern, interactive navigation that elevates the overall UX.
+---
+
+## <span id="about-me">👤 About Me – Professional, Not Boring</span>  
 
 - Two-column layout: Image + description.  
 - Elegant typography with Playfair Display and italics.  
 - Responsive design with flex-wrap for smaller screens.  
 - Rounded corners for images and cards.
 
-![image](images/design.png)
+![image](images/about.png)
 
 ---
 
@@ -257,7 +259,7 @@ To support this storytelling flow, the navigation system is designed for clarity
 
 Deliver frictionless navigation while maintaining a sleek, interactive, and professionally structured browsing experience.
 
-![image](images/about.png)
+![image](images/design.png)
 
 ---
 
