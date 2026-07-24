@@ -67,7 +67,7 @@ The portfolio leverages the latest **HTML5, CSS3, JavaScript, SVG graphics, anim
 
 ## <span id="vision-purpose">🎯 Vision & Purpose</span>
 
-`This portfolio is strategically crafted to` **highlight skills, accomplishments, and professional services through an engaging and interactive digital experience.*
+`This portfolio is strategically crafted to` *highlight skills, accomplishments, and professional services through an engaging and interactive digital experience.*
 
 - 🚀 Amplify personal branding and strengthen LinkedIn visibility.  
 - 🏅 Showcase achievements to reinforce professional credibility.  
